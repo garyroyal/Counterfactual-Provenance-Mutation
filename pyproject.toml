@@ -1,0 +1,12 @@
+[project]
+name = "provenance-agent-eval"
+version = "0.1.0"
+description = "A provenance- and channel-aware evaluation core for tool-using agents"
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

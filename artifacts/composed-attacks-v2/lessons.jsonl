@@ -1,0 +1,1 @@
+{"conclusion": "多步或检查后参数漂移仍可绕过当前授权边界，需要优先修复并单独报告。", "confidence": "medium", "evidence": ["exp-0011"], "experiment": "composed-attack-matrix", "follow_up": "扩展真实 resource handle、并发执行和跨 Agent 消息签名，再验证重验证语义。", "lesson_id": "lesson-0001", "observation": "完成 15 个多步/竞态攻击 case；受保护策略仍有 1 个 case 发生攻击执行。", "timestamp": "2026-09-02T02:09:19+00:00"}

@@ -1,0 +1,1 @@
+{"conclusion": "非原子 grant consumption 允许并发 replay；需要将 nonce 检查与消费置于同一临界区。", "confidence": "medium", "evidence": ["exp-0002"], "experiment": "concurrent-grant-matrix", "follow_up": "把原子消费接入真实异步工具调度器，并测试跨进程锁或持久化 nonce store。", "lesson_id": "lesson-0001", "observation": "两个并发 worker 竞争同一 single-use grant；受保护条件仍发生 1 个 replay violation。", "timestamp": "2026-09-02T02:30:20+00:00"}

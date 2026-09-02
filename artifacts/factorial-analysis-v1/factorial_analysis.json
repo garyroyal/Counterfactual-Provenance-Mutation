@@ -1,0 +1,263 @@
+{
+  "models": [
+    {
+      "model": "qwen3-4b",
+      "model_decisions": 80,
+      "presentation_rates": {
+        "direct": 0.35,
+        "summary-preserve": 0.35,
+        "memory-loss": 0.15,
+        "rewrite-forged-user": 0.35
+      },
+      "presentation_vs_direct": [
+        {
+          "presentation": "summary-preserve",
+          "baseline": "direct",
+          "paired_observations": 20,
+          "rate_difference": 0.0,
+          "bootstrap_ci_95": [
+            -0.15,
+            0.15
+          ],
+          "mcnemar_current_only": 1,
+          "mcnemar_direct_only": 1,
+          "mcnemar_exact_p": 1.0
+        },
+        {
+          "presentation": "memory-loss",
+          "baseline": "direct",
+          "paired_observations": 20,
+          "rate_difference": -0.2,
+          "bootstrap_ci_95": [
+            -0.4,
+            0.0
+          ],
+          "mcnemar_current_only": 1,
+          "mcnemar_direct_only": 5,
+          "mcnemar_exact_p": 0.21875
+        },
+        {
+          "presentation": "rewrite-forged-user",
+          "baseline": "direct",
+          "paired_observations": 20,
+          "rate_difference": 0.0,
+          "bootstrap_ci_95": [
+            -0.15,
+            0.15
+          ],
+          "mcnemar_current_only": 1,
+          "mcnemar_direct_only": 1,
+          "mcnemar_exact_p": 1.0
+        }
+      ],
+      "policy_effect": {
+        "paired_runtime_cells": 320,
+        "no_policy_attack_rate": 0.3,
+        "source_aware_attack_rate": 0.0,
+        "source_aware_minus_no_policy": -0.3,
+        "bootstrap_ci_95": [
+          -0.35,
+          -0.25
+        ],
+        "mcnemar_source_only": 0,
+        "mcnemar_no_policy_only": 96,
+        "mcnemar_exact_p": 2.524354896707238e-29
+      }
+    },
+    {
+      "model": "llama32-3b",
+      "model_decisions": 80,
+      "presentation_rates": {
+        "direct": 0.15,
+        "summary-preserve": 0.1,
+        "memory-loss": 0.1,
+        "rewrite-forged-user": 0.0
+      },
+      "presentation_vs_direct": [
+        {
+          "presentation": "summary-preserve",
+          "baseline": "direct",
+          "paired_observations": 20,
+          "rate_difference": -0.05,
+          "bootstrap_ci_95": [
+            -0.15,
+            0.0
+          ],
+          "mcnemar_current_only": 0,
+          "mcnemar_direct_only": 1,
+          "mcnemar_exact_p": 1.0
+        },
+        {
+          "presentation": "memory-loss",
+          "baseline": "direct",
+          "paired_observations": 20,
+          "rate_difference": -0.05,
+          "bootstrap_ci_95": [
+            -0.15,
+            0.0
+          ],
+          "mcnemar_current_only": 0,
+          "mcnemar_direct_only": 1,
+          "mcnemar_exact_p": 1.0
+        },
+        {
+          "presentation": "rewrite-forged-user",
+          "baseline": "direct",
+          "paired_observations": 20,
+          "rate_difference": -0.15,
+          "bootstrap_ci_95": [
+            -0.3,
+            0.0
+          ],
+          "mcnemar_current_only": 0,
+          "mcnemar_direct_only": 3,
+          "mcnemar_exact_p": 0.25
+        }
+      ],
+      "policy_effect": {
+        "paired_runtime_cells": 320,
+        "no_policy_attack_rate": 0.0875,
+        "source_aware_attack_rate": 0.0,
+        "source_aware_minus_no_policy": -0.0875,
+        "bootstrap_ci_95": [
+          -0.11875,
+          -0.05625
+        ],
+        "mcnemar_source_only": 0,
+        "mcnemar_no_policy_only": 28,
+        "mcnemar_exact_p": 7.450580596923828e-09
+      }
+    }
+  ],
+  "evidence_runtime_rates": [
+    {
+      "model": "qwen3-4b",
+      "evidence": "direct",
+      "policy": "no_policy",
+      "runtime_attack_rate": 0.3,
+      "observations": 80
+    },
+    {
+      "model": "qwen3-4b",
+      "evidence": "direct",
+      "policy": "source_aware",
+      "runtime_attack_rate": 0.0,
+      "observations": 80
+    },
+    {
+      "model": "qwen3-4b",
+      "evidence": "summary-preserve",
+      "policy": "no_policy",
+      "runtime_attack_rate": 0.3,
+      "observations": 80
+    },
+    {
+      "model": "qwen3-4b",
+      "evidence": "summary-preserve",
+      "policy": "source_aware",
+      "runtime_attack_rate": 0.0,
+      "observations": 80
+    },
+    {
+      "model": "qwen3-4b",
+      "evidence": "memory-loss",
+      "policy": "no_policy",
+      "runtime_attack_rate": 0.3,
+      "observations": 80
+    },
+    {
+      "model": "qwen3-4b",
+      "evidence": "memory-loss",
+      "policy": "source_aware",
+      "runtime_attack_rate": 0.0,
+      "observations": 80
+    },
+    {
+      "model": "qwen3-4b",
+      "evidence": "rewrite-forged-user",
+      "policy": "no_policy",
+      "runtime_attack_rate": 0.3,
+      "observations": 80
+    },
+    {
+      "model": "qwen3-4b",
+      "evidence": "rewrite-forged-user",
+      "policy": "source_aware",
+      "runtime_attack_rate": 0.0,
+      "observations": 80
+    },
+    {
+      "model": "llama32-3b",
+      "evidence": "direct",
+      "policy": "no_policy",
+      "runtime_attack_rate": 0.0875,
+      "observations": 80
+    },
+    {
+      "model": "llama32-3b",
+      "evidence": "direct",
+      "policy": "source_aware",
+      "runtime_attack_rate": 0.0,
+      "observations": 80
+    },
+    {
+      "model": "llama32-3b",
+      "evidence": "summary-preserve",
+      "policy": "no_policy",
+      "runtime_attack_rate": 0.0875,
+      "observations": 80
+    },
+    {
+      "model": "llama32-3b",
+      "evidence": "summary-preserve",
+      "policy": "source_aware",
+      "runtime_attack_rate": 0.0,
+      "observations": 80
+    },
+    {
+      "model": "llama32-3b",
+      "evidence": "memory-loss",
+      "policy": "no_policy",
+      "runtime_attack_rate": 0.0875,
+      "observations": 80
+    },
+    {
+      "model": "llama32-3b",
+      "evidence": "memory-loss",
+      "policy": "source_aware",
+      "runtime_attack_rate": 0.0,
+      "observations": 80
+    },
+    {
+      "model": "llama32-3b",
+      "evidence": "rewrite-forged-user",
+      "policy": "no_policy",
+      "runtime_attack_rate": 0.0875,
+      "observations": 80
+    },
+    {
+      "model": "llama32-3b",
+      "evidence": "rewrite-forged-user",
+      "policy": "source_aware",
+      "runtime_attack_rate": 0.0,
+      "observations": 80
+    }
+  ],
+  "cross_model": [
+    {
+      "left": "qwen3-4b",
+      "right": "llama32-3b",
+      "paired_observations": 80,
+      "left_rate": 0.3,
+      "right_rate": 0.0875,
+      "rate_difference": 0.2125,
+      "bootstrap_ci_95": [
+        0.1125,
+        0.325
+      ],
+      "mcnemar_left_only": 20,
+      "mcnemar_right_only": 3,
+      "mcnemar_exact_p": 0.00048828125
+    }
+  ]
+}

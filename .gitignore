@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Local model endpoint configuration (keep the .example file)
+model_endpoints.json
+
+# Local nonce-store scratch files
+*.sqlite
+*.sqlite3
+*.db

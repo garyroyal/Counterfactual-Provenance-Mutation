@@ -1,0 +1,17 @@
+[
+  {
+    "name": "local-qwen3-4b",
+    "model": "qwen3:4b",
+    "base_url": "http://127.0.0.1:11434"
+  },
+  {
+    "name": "local-llama32-3b",
+    "model": "llama3.2:3b",
+    "base_url": "http://127.0.0.1:11434"
+  },
+  {
+    "name": "laptop-4090-model",
+    "model": "qwen3:8b",
+    "base_url": "http://192.168.1.100:11434"
+  }
+]

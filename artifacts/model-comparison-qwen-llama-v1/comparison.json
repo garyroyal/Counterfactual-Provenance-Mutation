@@ -1,0 +1,24 @@
+{
+  "models": [
+    "qwen3-4b",
+    "llama32-3b"
+  ],
+  "paired_observations": 80,
+  "comparisons": [
+    {
+      "left": "qwen3-4b",
+      "right": "llama32-3b",
+      "paired_observations": 80,
+      "left_rate": 0.3375,
+      "right_rate": 0.075,
+      "rate_difference": 0.2625,
+      "bootstrap_ci_95": [
+        0.1625,
+        0.3625
+      ],
+      "mcnemar_discordant_left": 21,
+      "mcnemar_discordant_right": 0,
+      "mcnemar_exact_p": 9.5367431640625e-07
+    }
+  ]
+}
