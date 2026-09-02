@@ -1,10 +1,36 @@
-# ProvenanceBench
+# Counterfactual Provenance Mutation (CPM) / ProvenanceBench
 
-独立于 AgentDojo 的工具型 LLM Agent provenance 与授权安全评测原型。项目测量不可信数据经过变换、记忆、工具转发和多 Agent 协作后是否发生 source loss、source forgery 或 authority laundering，并把模型动作诱导与 runtime 授权分开统计。
+工具型 LLM Agent 的 **provenance-fidelity 压力测试协议**。CPM 在固定的 agent 轨迹上以受控比例破坏 provenance 证据（丢失、伪造、归因错误、taint 合并），对多类 provenance-based 授权机制做配对重放，输出攻击成功率与合法任务误阻断率随 provenance 错误率的退化曲线、阶段归因和不变量违反。它是测量协议，不是新的防御。
 
-完整研究主线、当前证据、限制和下一步见 [RESEARCH_SUMMARY.md](RESEARCH_SUMMARY.md)。
+- 架构与路线图：[ARCHITECTURE.md](ARCHITECTURE.md)
+- 文献边界：[INNOVATION_AUDIT_2026.md](INNOVATION_AUDIT_2026.md)
+- 历史研究记录：[RESEARCH_SUMMARY.md](RESEARCH_SUMMARY.md)
 
-## 快速运行
+## CPM 主线
+
+```bash
+cd provenance_agent_eval
+PYTHONPATH=. python3 -m unittest discover -s tests
+# operator × error-rate × mechanism 退化曲线（合成 mixed-trust 轨迹套件）
+PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
+  --output-dir artifacts/cpm-degradation-synthetic-v1 --seeds 5
+# 输出：curves.md / curves.json（曲线）、cells.jsonl（每 cell 原始记录）、report.md、progress.html
+```
+
+`provenance_agent_eval/cpm/`：
+
+| 模块 | 职责 |
+|---|---|
+| `trace.py` | `AgentTrace` 规范、oracle graph、只由真实 root 决定的 ground truth |
+| `operators.py` | `MutationOperator`：preserve / drop_label / forge_label / misattribute_parent / merge_taint，各自绑定真实成因与不变量 |
+| `schedule.py` | 确定性 mutation 选择（operator, rate, seed, trace_id） |
+| `defenses.py` | 机制抽象：no_policy / label_trusting / lineage_verifying / origin_routing / whole_call_quarantine |
+| `replay.py` | trace × schedule × mechanism → 决策、receipt、mutation 触及标记 |
+| `degradation.py` | sweep、退化曲线、阶段归因、不变量统计 |
+| `stats.py` | Wilson、按 trace 聚类 bootstrap、拒绝对确定性 cell 报 p 值的 McNemar |
+| `synthetic.py` | 10 个 mixed-trust 模板 × 变体 × benign/attack 双胞胎 |
+
+## 历史实验入口（附录 / 实现验证）
 
 核心项目只依赖 Python 标准库；Redis store 需要额外安装 `redis-py`，仅在使用 Redis 实验时启用：
 

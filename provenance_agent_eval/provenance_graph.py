@@ -123,18 +123,94 @@ class ProvenanceGraph:
         self._nodes[node_id] = updated
         return updated
 
+    def copy(self) -> "ProvenanceGraph":
+        """Return an independent graph sharing the immutable node objects."""
+
+        clone = ProvenanceGraph()
+        clone._nodes = dict(self._nodes)
+        return clone
+
+    def rewire(
+        self,
+        node_id: str,
+        *,
+        parents: Iterable[str] | None = None,
+        attached_sources: Iterable[Provenance] | None = None,
+        operation: TransformKind | str | None = None,
+    ) -> ProvenanceNode:
+        """Replace a derived node's edges and/or claimed sources.
+
+        This is the primitive used by counterfactual mutation operators. It is
+        deliberately unavailable to policies: a defense only reads the graph.
+        Root (source) nodes cannot be re-parented, and cycles are rejected.
+        """
+
+        node = self._require(node_id)
+        new_parents = node.parents if parents is None else frozenset(parents)
+        if parents is not None:
+            if not node.parents:
+                raise ValueError(f"cannot re-parent a root source node: {node_id}")
+            if not new_parents:
+                raise ValueError("a derived node must keep at least one parent")
+            missing = new_parents - self._nodes.keys()
+            if missing:
+                raise KeyError(f"unknown parent nodes: {sorted(missing)}")
+            for parent_id in new_parents:
+                if parent_id == node_id or self._reaches(parent_id, node_id):
+                    raise ValueError(f"rewiring {node_id} under {parent_id} would create a cycle")
+        updated = ProvenanceNode(
+            node_id=node.node_id,
+            operation=(
+                node.operation
+                if operation is None
+                else operation.value if isinstance(operation, TransformKind) else str(operation)
+            ),
+            parents=new_parents,
+            attached_sources=node.attached_sources if attached_sources is None else frozenset(attached_sources),
+            endorsements=node.endorsements,
+        )
+        self._nodes[node_id] = updated
+        return updated
+
+    def children(self, node_id: str) -> frozenset[str]:
+        self._require(node_id)
+        return frozenset(child.node_id for child in self._nodes.values() if node_id in child.parents)
+
     def node(self, node_id: str) -> ProvenanceNode:
         return self._require(node_id)
 
     def root_sources(self, node_id: str) -> frozenset[Provenance]:
-        node = self._require(node_id)
-        if not node.parents:
-            return node.attached_sources
-        return frozenset(
-            source
-            for parent_id in node.parents
-            for source in self.root_sources(parent_id)
-        )
+        self._require(node_id)
+        memo: dict[str, frozenset[Provenance]] = {}
+
+        def visit(current: str) -> frozenset[Provenance]:
+            cached = memo.get(current)
+            if cached is not None:
+                return cached
+            node = self._nodes[current]
+            if not node.parents:
+                result = node.attached_sources
+            else:
+                result = frozenset(source for parent_id in node.parents for source in visit(parent_id))
+            memo[current] = result
+            return result
+
+        return visit(node_id)
+
+    def _reaches(self, start: str, target: str) -> bool:
+        """True when ``target`` is an ancestor of (or equal to) ``start``."""
+
+        stack = [start]
+        seen: set[str] = set()
+        while stack:
+            current = stack.pop()
+            if current == target:
+                return True
+            if current in seen:
+                continue
+            seen.add(current)
+            stack.extend(self._nodes[current].parents)
+        return False
 
     def missing_sources(self, node_id: str) -> frozenset[Provenance]:
         node = self._require(node_id)
