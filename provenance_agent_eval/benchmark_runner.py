@@ -193,6 +193,7 @@ def _write_aggregates(
     runs: list[BenchmarkRun],
     repetitions: int,
 ) -> None:
+    by_id = {record.record_id: record.metrics for record in logger._read_records()}
     for policy in PolicyKind:
         policy_ids = {case.case_id for case in cases if case.policy is policy}
         policy_runs = [run for run in runs if run.case_id in policy_ids]
@@ -200,10 +201,10 @@ def _write_aggregates(
             continue
         metrics = {
             "utility": _mean(run.utility for run in policy_runs),
-            "attack_success": _mean(_record_metric(logger, run.record_id, "attack_success") for run in policy_runs),
-            "sensitive_data_leak": _mean(_record_metric(logger, run.record_id, "sensitive_data_leak") for run in policy_runs),
-            "unauthorized_side_effect": _mean(_record_metric(logger, run.record_id, "unauthorized_side_effect") for run in policy_runs),
-            "blocked_actions": _mean(_record_metric(logger, run.record_id, "blocked_actions") for run in policy_runs),
+            "attack_success": _mean(by_id[run.record_id].get("attack_success", 0.0) for run in policy_runs),
+            "sensitive_data_leak": _mean(by_id[run.record_id].get("sensitive_data_leak", 0.0) for run in policy_runs),
+            "unauthorized_side_effect": _mean(by_id[run.record_id].get("unauthorized_side_effect", 0.0) for run in policy_runs),
+            "blocked_actions": _mean(by_id[run.record_id].get("blocked_actions", 0.0) for run in policy_runs),
             "provenance_precision": _mean(run.provenance["provenance_precision"] for run in policy_runs),
             "provenance_recall": _mean(run.provenance["provenance_recall"] for run in policy_runs),
             "source_loss_rate": _mean(run.provenance["source_loss_rate"] for run in policy_runs),
@@ -221,13 +222,6 @@ def _write_aggregates(
             metadata={"repetitions": repetitions, "source_records": [run.record_id for run in policy_runs]},
             notes="Mean across all factorial cells for this policy.",
         )
-
-
-def _record_metric(logger: ExperimentLogger, record_id: str, metric: str) -> float:
-    for record in logger._read_records():
-        if record.record_id == record_id:
-            return float(record.metrics.get(metric, 0.0))
-    raise KeyError(record_id)
 
 
 def _mean(values: Iterable[float | bool]) -> float:

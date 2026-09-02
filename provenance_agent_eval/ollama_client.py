@@ -47,6 +47,50 @@ class OllamaClient:
                 f"available models: {', '.join(available) or '(none)'}"
             )
 
+    def show_model(self, model: str) -> dict[str, object]:
+        """Return identity metadata needed to reproduce a run (digest, quantization, context)."""
+
+        request = Request(
+            f"{self.base_url}/api/show",
+            data=json.dumps({"model": model}).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urlopen(request, timeout=min(self.timeout, 15.0)) as response:
+                raw = json.loads(response.read().decode("utf-8"))
+        except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as exc:
+            raise RuntimeError(f"Ollama /api/show failed for {model!r}: {exc}") from exc
+        details = raw.get("details", {}) if isinstance(raw.get("details"), dict) else {}
+        model_info = raw.get("model_info", {}) if isinstance(raw.get("model_info"), dict) else {}
+        digest = None
+        for item in self._tags():
+            if item.get("name") == model:
+                digest = item.get("digest")
+                break
+        return {
+            "name": model,
+            "digest": digest,
+            "family": details.get("family"),
+            "parameter_size": details.get("parameter_size"),
+            "quantization_level": details.get("quantization_level"),
+            "format": details.get("format"),
+            "context_length": next((value for key, value in model_info.items() if key.endswith(".context_length")), None),
+            "modified_at": raw.get("modified_at"),
+            "endpoint": self.base_url,
+            "decode_options": {"temperature": 0, "think": False, "format": "json"},
+        }
+
+    def _tags(self) -> list[dict[str, object]]:
+        request = Request(f"{self.base_url}/api/tags", method="GET")
+        try:
+            with urlopen(request, timeout=min(self.timeout, 10.0)) as response:
+                raw = json.loads(response.read().decode("utf-8"))
+        except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+            return []
+        models = raw.get("models", [])
+        return [item for item in models if isinstance(item, dict)] if isinstance(models, list) else []
+
     def chat(self, *, model: str, messages: list[dict[str, str]]) -> OllamaResponse:
         payload = {
             "model": model,
