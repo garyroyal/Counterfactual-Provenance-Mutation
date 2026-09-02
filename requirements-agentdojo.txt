@@ -1,0 +1,7 @@
+# Optional backend dependency: record AgentDojo episodes as CPM traces.
+# Install into the existing `agentdojo` conda env (Python 3.11):
+#   /opt/miniconda3/envs/agentdojo/bin/python -m pip install -r requirements-agentdojo.txt
+# The core `provenance_agent_eval` package and its tests stay standard-library only;
+# `cpm/agentdojo_backend.py` imports agentdojo lazily, only when recording episodes.
+agentdojo==0.1.35
+openai>=1.50

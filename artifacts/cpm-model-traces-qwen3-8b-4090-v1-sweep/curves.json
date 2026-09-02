@@ -1,0 +1,4767 @@
+{
+  "traces": 420,
+  "attack_traces": 0,
+  "operators": [
+    "preserve",
+    "drop_label",
+    "forge_label",
+    "misattribute_parent",
+    "merge_taint"
+  ],
+  "defenses": [
+    "no_policy",
+    "label_trusting",
+    "lineage_verifying",
+    "origin_routing",
+    "whole_call_quarantine"
+  ],
+  "rates": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "seeds_per_stochastic_rate": 5,
+  "curves": {
+    "preserve": {
+      "no_policy": [
+        {
+          "operator": "preserve",
+          "defense": "no_policy",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "preserve",
+          "defense": "no_policy",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.10352380952380953,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "no_policy",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.2546984126984127,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "no_policy",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.513095238095238,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "no_policy",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7578968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "no_policy",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "label_trusting": [
+        {
+          "operator": "preserve",
+          "defense": "label_trusting",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "preserve",
+          "defense": "label_trusting",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.10352380952380953,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "label_trusting",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.2546984126984127,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "label_trusting",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.513095238095238,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "label_trusting",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7578968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "label_trusting",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "lineage_verifying": [
+        {
+          "operator": "preserve",
+          "defense": "lineage_verifying",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "preserve",
+          "defense": "lineage_verifying",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.10352380952380953,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "lineage_verifying",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.2546984126984127,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "lineage_verifying",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.513095238095238,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "lineage_verifying",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7578968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "lineage_verifying",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "origin_routing": [
+        {
+          "operator": "preserve",
+          "defense": "origin_routing",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "preserve",
+          "defense": "origin_routing",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.10352380952380953,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "origin_routing",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.2546984126984127,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "origin_routing",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.513095238095238,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "origin_routing",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7578968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "origin_routing",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "whole_call_quarantine": [
+        {
+          "operator": "preserve",
+          "defense": "whole_call_quarantine",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 294,
+            "trials": 420,
+            "rate": 0.7,
+            "ci_low": 0.6545226040029885,
+            "ci_high": 0.741852022649739,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "preserve",
+          "defense": "whole_call_quarantine",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.10352380952380953,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "whole_call_quarantine",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.2546984126984127,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "whole_call_quarantine",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.513095238095238,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "whole_call_quarantine",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7578968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "preserve",
+          "defense": "whole_call_quarantine",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 294,
+            "trials": 420,
+            "rate": 0.7,
+            "ci_low": 0.6545226040029885,
+            "ci_high": 0.741852022649739,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ]
+    },
+    "drop_label": {
+      "no_policy": [
+        {
+          "operator": "drop_label",
+          "defense": "no_policy",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "drop_label",
+          "defense": "no_policy",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09853174603174603,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "no_policy",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.25072222222222224,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "no_policy",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5043730158730159,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "no_policy",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7497460317460317,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "no_policy",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "label_trusting": [
+        {
+          "operator": "drop_label",
+          "defense": "label_trusting",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "drop_label",
+          "defense": "label_trusting",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 190,
+            "trials": 2100,
+            "rate": 0.09047619047619047,
+            "ci_low": 0.07894327268179085,
+            "ci_high": 0.10350462861389706,
+            "cluster_ci_low": 0.07904761904761905,
+            "cluster_ci_high": 0.10238095238095238
+          },
+          "decision_flips": 190,
+          "authority_gains": 0,
+          "utility_losses": 190,
+          "flips_attributed_to_mutation": 190,
+          "mutated_node_share": 0.09853174603174603,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "label_trusting",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 495,
+            "trials": 2100,
+            "rate": 0.2357142857142857,
+            "ci_low": 0.21805356031065531,
+            "ci_high": 0.2543401434324921,
+            "cluster_ci_low": 0.21714285714285714,
+            "cluster_ci_high": 0.2542857142857143
+          },
+          "decision_flips": 495,
+          "authority_gains": 0,
+          "utility_losses": 495,
+          "flips_attributed_to_mutation": 495,
+          "mutated_node_share": 0.25072222222222224,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "label_trusting",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1049,
+            "trials": 2100,
+            "rate": 0.49952380952380954,
+            "ci_low": 0.4781592609998278,
+            "ci_high": 0.5208900970249346,
+            "cluster_ci_low": 0.47904761904761906,
+            "cluster_ci_high": 0.520952380952381
+          },
+          "decision_flips": 1049,
+          "authority_gains": 0,
+          "utility_losses": 1049,
+          "flips_attributed_to_mutation": 1049,
+          "mutated_node_share": 0.5043730158730159,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "label_trusting",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1547,
+            "trials": 2100,
+            "rate": 0.7366666666666667,
+            "ci_low": 0.7174091198973191,
+            "ci_high": 0.7550599417957542,
+            "cluster_ci_low": 0.719047619047619,
+            "cluster_ci_high": 0.7542857142857143
+          },
+          "decision_flips": 1547,
+          "authority_gains": 0,
+          "utility_losses": 1547,
+          "flips_attributed_to_mutation": 1547,
+          "mutated_node_share": 0.7497460317460317,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "label_trusting",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 420,
+            "trials": 420,
+            "rate": 1.0,
+            "ci_low": 0.9909365666318185,
+            "ci_high": 0.9999999999999999,
+            "cluster_ci_low": 1.0,
+            "cluster_ci_high": 1.0
+          },
+          "decision_flips": 420,
+          "authority_gains": 0,
+          "utility_losses": 420,
+          "flips_attributed_to_mutation": 420,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "lineage_verifying": [
+        {
+          "operator": "drop_label",
+          "defense": "lineage_verifying",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "drop_label",
+          "defense": "lineage_verifying",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 190,
+            "trials": 2100,
+            "rate": 0.09047619047619047,
+            "ci_low": 0.07894327268179085,
+            "ci_high": 0.10350462861389706,
+            "cluster_ci_low": 0.07904761904761905,
+            "cluster_ci_high": 0.10238095238095238
+          },
+          "decision_flips": 190,
+          "authority_gains": 0,
+          "utility_losses": 190,
+          "flips_attributed_to_mutation": 190,
+          "mutated_node_share": 0.09853174603174603,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "lineage_verifying",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 495,
+            "trials": 2100,
+            "rate": 0.2357142857142857,
+            "ci_low": 0.21805356031065531,
+            "ci_high": 0.2543401434324921,
+            "cluster_ci_low": 0.21714285714285714,
+            "cluster_ci_high": 0.2542857142857143
+          },
+          "decision_flips": 495,
+          "authority_gains": 0,
+          "utility_losses": 495,
+          "flips_attributed_to_mutation": 495,
+          "mutated_node_share": 0.25072222222222224,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "lineage_verifying",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1049,
+            "trials": 2100,
+            "rate": 0.49952380952380954,
+            "ci_low": 0.4781592609998278,
+            "ci_high": 0.5208900970249346,
+            "cluster_ci_low": 0.47904761904761906,
+            "cluster_ci_high": 0.520952380952381
+          },
+          "decision_flips": 1049,
+          "authority_gains": 0,
+          "utility_losses": 1049,
+          "flips_attributed_to_mutation": 1049,
+          "mutated_node_share": 0.5043730158730159,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "lineage_verifying",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1547,
+            "trials": 2100,
+            "rate": 0.7366666666666667,
+            "ci_low": 0.7174091198973191,
+            "ci_high": 0.7550599417957542,
+            "cluster_ci_low": 0.719047619047619,
+            "cluster_ci_high": 0.7542857142857143
+          },
+          "decision_flips": 1547,
+          "authority_gains": 0,
+          "utility_losses": 1547,
+          "flips_attributed_to_mutation": 1547,
+          "mutated_node_share": 0.7497460317460317,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "lineage_verifying",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 420,
+            "trials": 420,
+            "rate": 1.0,
+            "ci_low": 0.9909365666318185,
+            "ci_high": 0.9999999999999999,
+            "cluster_ci_low": 1.0,
+            "cluster_ci_high": 1.0
+          },
+          "decision_flips": 420,
+          "authority_gains": 0,
+          "utility_losses": 420,
+          "flips_attributed_to_mutation": 420,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "origin_routing": [
+        {
+          "operator": "drop_label",
+          "defense": "origin_routing",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "drop_label",
+          "defense": "origin_routing",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09853174603174603,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "origin_routing",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.25072222222222224,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "origin_routing",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5043730158730159,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "origin_routing",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7497460317460317,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "origin_routing",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "whole_call_quarantine": [
+        {
+          "operator": "drop_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 294,
+            "trials": 420,
+            "rate": 0.7,
+            "ci_low": 0.6545226040029885,
+            "ci_high": 0.741852022649739,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "drop_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09853174603174603,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.25072222222222224,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5043730158730159,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7497460317460317,
+          "stochastic": true
+        },
+        {
+          "operator": "drop_label",
+          "defense": "whole_call_quarantine",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 294,
+            "trials": 420,
+            "rate": 0.7,
+            "ci_low": 0.6545226040029885,
+            "ci_high": 0.741852022649739,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ]
+    },
+    "forge_label": {
+      "no_policy": [
+        {
+          "operator": "forge_label",
+          "defense": "no_policy",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "forge_label",
+          "defense": "no_policy",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09936507936507936,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "no_policy",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24253968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "no_policy",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5059523809523809,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "no_policy",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7518253968253968,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "no_policy",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "label_trusting": [
+        {
+          "operator": "forge_label",
+          "defense": "label_trusting",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "forge_label",
+          "defense": "label_trusting",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09936507936507936,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "label_trusting",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24253968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "label_trusting",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5059523809523809,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "label_trusting",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7518253968253968,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "label_trusting",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "lineage_verifying": [
+        {
+          "operator": "forge_label",
+          "defense": "lineage_verifying",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "forge_label",
+          "defense": "lineage_verifying",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09936507936507936,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "lineage_verifying",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24253968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "lineage_verifying",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5059523809523809,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "lineage_verifying",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7518253968253968,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "lineage_verifying",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "origin_routing": [
+        {
+          "operator": "forge_label",
+          "defense": "origin_routing",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "forge_label",
+          "defense": "origin_routing",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09936507936507936,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "origin_routing",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24253968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "origin_routing",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5059523809523809,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "origin_routing",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7518253968253968,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "origin_routing",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "whole_call_quarantine": [
+        {
+          "operator": "forge_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 294,
+            "trials": 420,
+            "rate": 0.7,
+            "ci_low": 0.6545226040029885,
+            "ci_high": 0.741852022649739,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "forge_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09936507936507936,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24253968253968253,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5059523809523809,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "whole_call_quarantine",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1470,
+            "trials": 2100,
+            "rate": 0.7,
+            "ci_low": 0.6800496719526776,
+            "ci_high": 0.7192199576471026,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7518253968253968,
+          "stochastic": true
+        },
+        {
+          "operator": "forge_label",
+          "defense": "whole_call_quarantine",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 294,
+            "trials": 420,
+            "rate": 0.7,
+            "ci_low": 0.6545226040029885,
+            "ci_high": 0.741852022649739,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ]
+    },
+    "misattribute_parent": {
+      "no_policy": [
+        {
+          "operator": "misattribute_parent",
+          "defense": "no_policy",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "no_policy",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09793650793650793,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "no_policy",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24849206349206351,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "no_policy",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5025396825396825,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "no_policy",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.746031746031746,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "no_policy",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "label_trusting": [
+        {
+          "operator": "misattribute_parent",
+          "defense": "label_trusting",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "label_trusting",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09793650793650793,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "label_trusting",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24849206349206351,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "label_trusting",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5025396825396825,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "label_trusting",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.746031746031746,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "label_trusting",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "lineage_verifying": [
+        {
+          "operator": "misattribute_parent",
+          "defense": "lineage_verifying",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "lineage_verifying",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09793650793650793,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "lineage_verifying",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24849206349206351,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "lineage_verifying",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5025396825396825,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "lineage_verifying",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.746031746031746,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "lineage_verifying",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "origin_routing": [
+        {
+          "operator": "misattribute_parent",
+          "defense": "origin_routing",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "origin_routing",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.09793650793650793,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "origin_routing",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24849206349206351,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "origin_routing",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5025396825396825,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "origin_routing",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.746031746031746,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "origin_routing",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "whole_call_quarantine": [
+        {
+          "operator": "misattribute_parent",
+          "defense": "whole_call_quarantine",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 294,
+            "trials": 420,
+            "rate": 0.7,
+            "ci_low": 0.6545226040029885,
+            "ci_high": 0.741852022649739,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "whole_call_quarantine",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1227,
+            "trials": 2100,
+            "rate": 0.5842857142857143,
+            "ci_low": 0.5630715760201519,
+            "ci_high": 0.6051920535968984,
+            "cluster_ci_low": 0.5447619047619048,
+            "cluster_ci_high": 0.6252380952380953
+          },
+          "decision_flips": 243,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 243,
+          "mutated_node_share": 0.09793650793650793,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "whole_call_quarantine",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 922,
+            "trials": 2100,
+            "rate": 0.439047619047619,
+            "ci_low": 0.41795254143905997,
+            "ci_high": 0.46036528573053076,
+            "cluster_ci_low": 0.4057142857142857,
+            "cluster_ci_high": 0.47285714285714286
+          },
+          "decision_flips": 548,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 548,
+          "mutated_node_share": 0.24849206349206351,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "whole_call_quarantine",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 500,
+            "trials": 2100,
+            "rate": 0.23809523809523808,
+            "ci_low": 0.2203673469908441,
+            "ci_high": 0.25677956662849116,
+            "cluster_ci_low": 0.2138095238095238,
+            "cluster_ci_high": 0.2633333333333333
+          },
+          "decision_flips": 970,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 970,
+          "mutated_node_share": 0.5025396825396825,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "whole_call_quarantine",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 208,
+            "trials": 2100,
+            "rate": 0.09904761904761905,
+            "ci_low": 0.0869939360636757,
+            "ci_high": 0.11256552078628854,
+            "cluster_ci_low": 0.08333333333333333,
+            "cluster_ci_high": 0.11523809523809524
+          },
+          "decision_flips": 1262,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 1262,
+          "mutated_node_share": 0.746031746031746,
+          "stochastic": true
+        },
+        {
+          "operator": "misattribute_parent",
+          "defense": "whole_call_quarantine",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 294,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 294,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ]
+    },
+    "merge_taint": {
+      "no_policy": [
+        {
+          "operator": "merge_taint",
+          "defense": "no_policy",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "no_policy",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.10023809523809524,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "no_policy",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.24920634920634924,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "no_policy",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.5143650793650794,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "no_policy",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 2100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0018259260005492287,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.7483333333333333,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "no_policy",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "label_trusting": [
+        {
+          "operator": "merge_taint",
+          "defense": "label_trusting",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "label_trusting",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 204,
+            "trials": 2100,
+            "rate": 0.09714285714285714,
+            "ci_low": 0.0852022471697381,
+            "ci_high": 0.11055464177927585,
+            "cluster_ci_low": 0.08476190476190476,
+            "cluster_ci_high": 0.11
+          },
+          "decision_flips": 204,
+          "authority_gains": 0,
+          "utility_losses": 204,
+          "flips_attributed_to_mutation": 204,
+          "mutated_node_share": 0.10023809523809524,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "label_trusting",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 514,
+            "trials": 2100,
+            "rate": 0.24476190476190476,
+            "ci_low": 0.22685008248977084,
+            "ci_high": 0.26360581878289047,
+            "cluster_ci_low": 0.22714285714285715,
+            "cluster_ci_high": 0.2623809523809524
+          },
+          "decision_flips": 514,
+          "authority_gains": 0,
+          "utility_losses": 514,
+          "flips_attributed_to_mutation": 514,
+          "mutated_node_share": 0.24920634920634924,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "label_trusting",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1067,
+            "trials": 2100,
+            "rate": 0.508095238095238,
+            "ci_low": 0.48671782445089695,
+            "ci_high": 0.5294430891281416,
+            "cluster_ci_low": 0.48714285714285716,
+            "cluster_ci_high": 0.5285714285714286
+          },
+          "decision_flips": 1067,
+          "authority_gains": 0,
+          "utility_losses": 1067,
+          "flips_attributed_to_mutation": 1067,
+          "mutated_node_share": 0.5143650793650794,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "label_trusting",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1567,
+            "trials": 2100,
+            "rate": 0.7461904761904762,
+            "ci_low": 0.7271394814647854,
+            "ci_high": 0.7643424197330395,
+            "cluster_ci_low": 0.7271428571428571,
+            "cluster_ci_high": 0.7647619047619048
+          },
+          "decision_flips": 1567,
+          "authority_gains": 0,
+          "utility_losses": 1567,
+          "flips_attributed_to_mutation": 1567,
+          "mutated_node_share": 0.7483333333333333,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "label_trusting",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 420,
+            "trials": 420,
+            "rate": 1.0,
+            "ci_low": 0.9909365666318185,
+            "ci_high": 0.9999999999999999,
+            "cluster_ci_low": 1.0,
+            "cluster_ci_high": 1.0
+          },
+          "decision_flips": 420,
+          "authority_gains": 0,
+          "utility_losses": 420,
+          "flips_attributed_to_mutation": 420,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "lineage_verifying": [
+        {
+          "operator": "merge_taint",
+          "defense": "lineage_verifying",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "lineage_verifying",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 204,
+            "trials": 2100,
+            "rate": 0.09714285714285714,
+            "ci_low": 0.0852022471697381,
+            "ci_high": 0.11055464177927585,
+            "cluster_ci_low": 0.08476190476190476,
+            "cluster_ci_high": 0.11
+          },
+          "decision_flips": 204,
+          "authority_gains": 0,
+          "utility_losses": 204,
+          "flips_attributed_to_mutation": 204,
+          "mutated_node_share": 0.10023809523809524,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "lineage_verifying",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 514,
+            "trials": 2100,
+            "rate": 0.24476190476190476,
+            "ci_low": 0.22685008248977084,
+            "ci_high": 0.26360581878289047,
+            "cluster_ci_low": 0.22714285714285715,
+            "cluster_ci_high": 0.2623809523809524
+          },
+          "decision_flips": 514,
+          "authority_gains": 0,
+          "utility_losses": 514,
+          "flips_attributed_to_mutation": 514,
+          "mutated_node_share": 0.24920634920634924,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "lineage_verifying",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1067,
+            "trials": 2100,
+            "rate": 0.508095238095238,
+            "ci_low": 0.48671782445089695,
+            "ci_high": 0.5294430891281416,
+            "cluster_ci_low": 0.48714285714285716,
+            "cluster_ci_high": 0.5285714285714286
+          },
+          "decision_flips": 1067,
+          "authority_gains": 0,
+          "utility_losses": 1067,
+          "flips_attributed_to_mutation": 1067,
+          "mutated_node_share": 0.5143650793650794,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "lineage_verifying",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1567,
+            "trials": 2100,
+            "rate": 0.7461904761904762,
+            "ci_low": 0.7271394814647854,
+            "ci_high": 0.7643424197330395,
+            "cluster_ci_low": 0.7271428571428571,
+            "cluster_ci_high": 0.7647619047619048
+          },
+          "decision_flips": 1567,
+          "authority_gains": 0,
+          "utility_losses": 1567,
+          "flips_attributed_to_mutation": 1567,
+          "mutated_node_share": 0.7483333333333333,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "lineage_verifying",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 420,
+            "trials": 420,
+            "rate": 1.0,
+            "ci_low": 0.9909365666318185,
+            "ci_high": 0.9999999999999999,
+            "cluster_ci_low": 1.0,
+            "cluster_ci_high": 1.0
+          },
+          "decision_flips": 420,
+          "authority_gains": 0,
+          "utility_losses": 420,
+          "flips_attributed_to_mutation": 420,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "origin_routing": [
+        {
+          "operator": "merge_taint",
+          "defense": "origin_routing",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 0,
+            "trials": 420,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.009063433368181315,
+            "cluster_ci_low": 0.0,
+            "cluster_ci_high": 0.0
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "origin_routing",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 204,
+            "trials": 2100,
+            "rate": 0.09714285714285714,
+            "ci_low": 0.0852022471697381,
+            "ci_high": 0.11055464177927585,
+            "cluster_ci_low": 0.08476190476190476,
+            "cluster_ci_high": 0.11
+          },
+          "decision_flips": 204,
+          "authority_gains": 0,
+          "utility_losses": 204,
+          "flips_attributed_to_mutation": 204,
+          "mutated_node_share": 0.10023809523809524,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "origin_routing",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 514,
+            "trials": 2100,
+            "rate": 0.24476190476190476,
+            "ci_low": 0.22685008248977084,
+            "ci_high": 0.26360581878289047,
+            "cluster_ci_low": 0.22714285714285715,
+            "cluster_ci_high": 0.2623809523809524
+          },
+          "decision_flips": 514,
+          "authority_gains": 0,
+          "utility_losses": 514,
+          "flips_attributed_to_mutation": 514,
+          "mutated_node_share": 0.24920634920634924,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "origin_routing",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1067,
+            "trials": 2100,
+            "rate": 0.508095238095238,
+            "ci_low": 0.48671782445089695,
+            "ci_high": 0.5294430891281416,
+            "cluster_ci_low": 0.48714285714285716,
+            "cluster_ci_high": 0.5285714285714286
+          },
+          "decision_flips": 1067,
+          "authority_gains": 0,
+          "utility_losses": 1067,
+          "flips_attributed_to_mutation": 1067,
+          "mutated_node_share": 0.5143650793650794,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "origin_routing",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1567,
+            "trials": 2100,
+            "rate": 0.7461904761904762,
+            "ci_low": 0.7271394814647854,
+            "ci_high": 0.7643424197330395,
+            "cluster_ci_low": 0.7271428571428571,
+            "cluster_ci_high": 0.7647619047619048
+          },
+          "decision_flips": 1567,
+          "authority_gains": 0,
+          "utility_losses": 1567,
+          "flips_attributed_to_mutation": 1567,
+          "mutated_node_share": 0.7483333333333333,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "origin_routing",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 420,
+            "trials": 420,
+            "rate": 1.0,
+            "ci_low": 0.9909365666318185,
+            "ci_high": 0.9999999999999999,
+            "cluster_ci_low": 1.0,
+            "cluster_ci_high": 1.0
+          },
+          "decision_flips": 420,
+          "authority_gains": 0,
+          "utility_losses": 420,
+          "flips_attributed_to_mutation": 420,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ],
+      "whole_call_quarantine": [
+        {
+          "operator": "merge_taint",
+          "defense": "whole_call_quarantine",
+          "rate": 0.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 294,
+            "trials": 420,
+            "rate": 0.7,
+            "ci_low": 0.6545226040029885,
+            "ci_high": 0.741852022649739,
+            "cluster_ci_low": 0.6547619047619048,
+            "cluster_ci_high": 0.7476190476190476
+          },
+          "decision_flips": 0,
+          "authority_gains": 0,
+          "utility_losses": 0,
+          "flips_attributed_to_mutation": 0,
+          "mutated_node_share": 0.0,
+          "stochastic": false
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "whole_call_quarantine",
+          "rate": 0.1,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1532,
+            "trials": 2100,
+            "rate": 0.7295238095238096,
+            "ci_low": 0.7101187948072072,
+            "ci_high": 0.7480906372573026,
+            "cluster_ci_low": 0.6876190476190476,
+            "cluster_ci_high": 0.7733333333333333
+          },
+          "decision_flips": 62,
+          "authority_gains": 0,
+          "utility_losses": 62,
+          "flips_attributed_to_mutation": 62,
+          "mutated_node_share": 0.10023809523809524,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "whole_call_quarantine",
+          "rate": 0.25,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1622,
+            "trials": 2100,
+            "rate": 0.7723809523809524,
+            "ci_low": 0.7539598531065017,
+            "ci_high": 0.7898073567293895,
+            "cluster_ci_low": 0.7361904761904762,
+            "cluster_ci_high": 0.8095238095238095
+          },
+          "decision_flips": 152,
+          "authority_gains": 0,
+          "utility_losses": 152,
+          "flips_attributed_to_mutation": 152,
+          "mutated_node_share": 0.24920634920634924,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "whole_call_quarantine",
+          "rate": 0.5,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1791,
+            "trials": 2100,
+            "rate": 0.8528571428571429,
+            "ci_low": 0.83706181494734,
+            "ci_high": 0.8673638887037011,
+            "cluster_ci_low": 0.8280952380952381,
+            "cluster_ci_high": 0.878095238095238
+          },
+          "decision_flips": 321,
+          "authority_gains": 0,
+          "utility_losses": 321,
+          "flips_attributed_to_mutation": 321,
+          "mutated_node_share": 0.5143650793650794,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "whole_call_quarantine",
+          "rate": 0.75,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 1934,
+            "trials": 2100,
+            "rate": 0.920952380952381,
+            "ci_low": 0.9086288170744011,
+            "ci_high": 0.9317386890356126,
+            "cluster_ci_low": 0.9047619047619048,
+            "cluster_ci_high": 0.9366666666666666
+          },
+          "decision_flips": 464,
+          "authority_gains": 0,
+          "utility_losses": 464,
+          "flips_attributed_to_mutation": 464,
+          "mutated_node_share": 0.7483333333333333,
+          "stochastic": true
+        },
+        {
+          "operator": "merge_taint",
+          "defense": "whole_call_quarantine",
+          "rate": 1.0,
+          "attack_traces": 0,
+          "benign_traces": 420,
+          "attack_success": {
+            "successes": 0,
+            "trials": 0,
+            "rate": null,
+            "ci_low": null,
+            "ci_high": null,
+            "cluster_ci_low": null,
+            "cluster_ci_high": null
+          },
+          "false_blocking": {
+            "successes": 420,
+            "trials": 420,
+            "rate": 1.0,
+            "ci_low": 0.9909365666318185,
+            "ci_high": 0.9999999999999999,
+            "cluster_ci_low": 1.0,
+            "cluster_ci_high": 1.0
+          },
+          "decision_flips": 126,
+          "authority_gains": 0,
+          "utility_losses": 126,
+          "flips_attributed_to_mutation": 126,
+          "mutated_node_share": 1.0,
+          "stochastic": false
+        }
+      ]
+    }
+  },
+  "mechanism_comparisons": [],
+  "invariants": {
+    "no_policy": {
+      "I1_preserve_flips": 0,
+      "I2_I3_authority_gains": 0,
+      "utility_losses_under_degradation": 0
+    },
+    "label_trusting": {
+      "I1_preserve_flips": 0,
+      "I2_I3_authority_gains": 0,
+      "utility_losses_under_degradation": 7473
+    },
+    "lineage_verifying": {
+      "I1_preserve_flips": 0,
+      "I2_I3_authority_gains": 0,
+      "utility_losses_under_degradation": 7473
+    },
+    "origin_routing": {
+      "I1_preserve_flips": 0,
+      "I2_I3_authority_gains": 0,
+      "utility_losses_under_degradation": 3772
+    },
+    "whole_call_quarantine": {
+      "I1_preserve_flips": 0,
+      "I2_I3_authority_gains": 0,
+      "utility_losses_under_degradation": 1125
+    }
+  }
+}

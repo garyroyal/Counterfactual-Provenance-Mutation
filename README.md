@@ -24,7 +24,26 @@ PYTHONPATH=. python3 -m provenance_agent_eval.cpm_model_demo \
 # 只重放已保存的 trace（不再调模型）：
 PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
   --traces artifacts/cpm-model-traces-qwen3-4b-v1/traces.jsonl --output-dir artifacts/replay-v1
+
+# AgentDojo backend：录制 slack suite 的多步 episode → AgentTrace → sweep
+# 需要 agentdojo 包（见 requirements-agentdojo.txt），用 conda env `agentdojo` 的解释器运行；
+# 核心包与测试仍是纯标准库，agentdojo 只在录制时惰性导入
+PYTHONPATH=. /opt/miniconda3/envs/agentdojo/bin/python -m provenance_agent_eval.cpm_agentdojo_demo \
+  --suite slack --model qwen3:8b --base-url http://192.168.1.105:11434 \
+  --output-dir artifacts/cpm-agentdojo-slack-qwen3-8b-v1 --seeds 5
+# 小样本验证：--user-tasks user_task_0,user_task_1 --injection-tasks injection_task_1 --max-episodes 4
+# 离线重转换已录 episode（不调模型、不需要 agentdojo）：
+PYTHONPATH=. python3 -m provenance_agent_eval.cpm_agentdojo_demo \
+  --episodes artifacts/cpm-agentdojo-slack-qwen3-8b-v1/episodes.jsonl \
+  --output-dir artifacts/cpm-agentdojo-slack-qwen3-8b-strict --untrusted-policy all_tool_outputs
+
+# 多次 sweep 的横向对照表（ASR/FBR @ 选定 p，聚类 bootstrap CI）
+PYTHONPATH=. python3 -m provenance_agent_eval.cpm_results_table \
+  synthetic=artifacts/cpm-degradation-synthetic-v1 \
+  agentdojo-qwen3-8b=artifacts/cpm-agentdojo-slack-qwen3-8b-v1-sweep --rates 0,0.25,0.5,1
 ```
+
+结果汇总（含 4B/8B 模型 trace 与 AgentDojo 对照）：[RESULTS.md](RESULTS.md)。
 
 `provenance_agent_eval/cpm/`：
 
@@ -38,6 +57,8 @@ PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
 | `degradation.py` | sweep、退化曲线、阶段归因、不变量统计 |
 | `stats.py` | Wilson、按 trace 聚类 bootstrap、拒绝对确定性 cell 报 p 值的 McNemar |
 | `synthetic.py` | 10 个 mixed-trust 模板 × 变体 × benign/attack 双胞胎 |
+| `model_traces.py` | 模型自填参数的单轮决策 → `AgentTrace`（结构沿用模板，模型决定 benign/attack 侧） |
+| `agentdojo_backend.py` | AgentDojo episode 录制（Ollama `/v1` tool calling）、oracle value attribution、`AgentTrace` 转换、CPM/AgentDojo 交叉表 |
 
 ## 历史实验入口（附录 / 实现验证）
 
