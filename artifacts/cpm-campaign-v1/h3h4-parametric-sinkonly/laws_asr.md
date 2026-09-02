@@ -4,403 +4,403 @@ Each row is one degradation curve (trace-level rate vs provenance error rate p).
 
 | operator | defense | group | traces | y0 | slope@0.1 [CI] | free (m,k) R² | linear R² | structural law | structural R² | max\|res\| |
 |---|---|---|---:|---:|---|---|---:|---|---:|---:|
-| `drop_label` | label_trusting | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | label_trusting | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | lineage_verifying | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=1, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=1, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=1, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=1, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=2, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=2, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=2, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=2, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=3, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=3, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=3, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=3, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=4, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=4, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=4, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=4, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=5, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=5, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=5, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | no_policy | propagate=False, depth=5, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | origin_routing | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `drop_label` | whole_call_quarantine | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | label_trusting | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.50 [0.00, 1.50] | (1,1) 0.990 | 0.991 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.990 | 0.050 |
-| `forge_label` | label_trusting | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,1.5) 0.988 | 0.963 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.941 | 0.138 |
-| `forge_label` | label_trusting | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,2.5) 0.996 | 0.813 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.992 | 0.075 |
-| `forge_label` | label_trusting | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,4) 0.998 | 0.691 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.998 | 0.038 |
-| `forge_label` | label_trusting | propagate=False, depth=2, k=1 | 4 | 0.00 | 2.50 [1.00, 4.00] | (0.5,0.5) 0.957 | 0.846 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.825 | 0.200 |
-| `forge_label` | label_trusting | propagate=False, depth=2, k=2 | 4 | 0.00 | 1.00 [0.00, 2.00] | (1,1.5) 0.989 | 0.953 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.962 | 0.100 |
-| `forge_label` | label_trusting | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (2,7) 0.988 | 0.829 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.931 | 0.228 |
-| `forge_label` | label_trusting | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.998 | 0.769 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.981 | 0.087 |
-| `forge_label` | label_trusting | propagate=False, depth=3, k=1 | 4 | 0.00 | 1.00 [0.00, 2.00] | (1,1) 0.961 | 0.976 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.961 | 0.150 |
-| `forge_label` | label_trusting | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1) 0.994 | 0.897 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.989 | 0.062 |
-| `forge_label` | label_trusting | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (2,8) 0.994 | 0.774 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.939 | 0.228 |
-| `forge_label` | label_trusting | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,7) 1.000 | 0.714 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.991 | 0.084 |
-| `forge_label` | label_trusting | propagate=False, depth=4, k=1 | 4 | 0.00 | 1.00 [0.00, 2.00] | (1.5,1.5) 0.985 | 0.986 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.982 | 0.100 |
-| `forge_label` | label_trusting | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (2,6) 0.998 | 0.857 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.984 | 0.088 |
-| `forge_label` | label_trusting | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,4) 0.998 | 0.691 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.980 | 0.122 |
-| `forge_label` | label_trusting | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,4) 0.999 | 0.664 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.999 | 0.016 |
-| `forge_label` | label_trusting | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.50 [0.00, 1.50] | (1,1.5) 0.983 | 0.967 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.946 | 0.150 |
-| `forge_label` | label_trusting | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,2) 0.995 | 0.864 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.995 | 0.062 |
-| `forge_label` | label_trusting | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1.5) 0.995 | 0.806 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.990 | 0.075 |
-| `forge_label` | label_trusting | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2.5) 0.999 | 0.568 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.965 | 0.166 |
-| `forge_label` | lineage_verifying | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | lineage_verifying | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=1, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=1, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=1, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=1, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=2, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=2, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=2, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=2, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=3, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=3, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=3, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=3, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=4, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=4, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=4, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=4, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=5, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=5, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=5, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | no_policy | propagate=False, depth=5, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | origin_routing | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `forge_label` | whole_call_quarantine | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | label_trusting | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | lineage_verifying | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=1, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=1, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=1, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=1, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=2, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=2, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=2, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=2, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=3, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=3, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=3, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=3, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=4, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=4, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=4, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=4, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=5, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=5, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=5, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | no_policy | propagate=False, depth=5, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | origin_routing | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=4, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=5, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `merge_taint` | whole_call_quarantine | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
-| `misattribute_parent` | label_trusting | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.50 [0.00, 1.50] | (1,1) 0.983 | 0.985 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.983 | 0.100 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1) 0.992 | 0.922 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.986 | 0.087 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.998 | 0.790 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.998 | 0.028 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,5) 0.999 | 0.635 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.994 | 0.066 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.50 [0.00, 1.50] | (1.5,3) 0.993 | 0.898 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.855 | 0.250 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,2.5) 0.999 | 0.946 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.964 | 0.137 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1.5) 0.997 | 0.779 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.984 | 0.075 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,5.5) 0.999 | 0.576 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.978 | 0.116 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=3, k=1 | 4 | 0.00 | 1.00 [0.00, 2.00] | (1,1) 0.977 | 0.983 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.977 | 0.100 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,3.5) 0.992 | 0.887 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.986 | 0.088 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,8) 0.999 | 0.691 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.986 | 0.075 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.998 | 0.769 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.981 | 0.087 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=4, k=1 | 4 | 0.00 | 2.50 [1.00, 4.00] | (0.5,0.5) 0.941 | 0.918 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.917 | 0.150 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.50 [0.00, 1.50] | (0.5,1) 0.991 | 0.862 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.978 | 0.112 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,4.5) 1.000 | 0.819 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.980 | 0.128 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2) 0.999 | 0.660 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.992 | 0.066 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=5, k=1 | 4 | 0.00 | 1.00 [0.00, 3.00] | (1,1) 0.980 | 0.981 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.980 | 0.100 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,1.5) 0.971 | 0.961 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.920 | 0.188 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2) 0.997 | 0.643 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.952 | 0.172 |
-| `misattribute_parent` | label_trusting | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,5) 1.000 | 0.779 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.958 | 0.184 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.50 [0.00, 1.50] | (1,1) 0.983 | 0.985 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.983 | 0.100 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1) 0.992 | 0.922 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.986 | 0.087 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.998 | 0.790 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.998 | 0.028 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,5) 0.999 | 0.635 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.994 | 0.066 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.50 [0.00, 1.50] | (1.5,3) 0.993 | 0.898 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.855 | 0.250 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,2.5) 0.999 | 0.946 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.964 | 0.137 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1.5) 0.997 | 0.779 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.984 | 0.075 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,5.5) 0.999 | 0.576 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.978 | 0.116 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=3, k=1 | 4 | 0.00 | 1.00 [0.00, 2.00] | (1,1) 0.977 | 0.983 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.977 | 0.100 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,3.5) 0.992 | 0.887 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.986 | 0.088 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,8) 0.999 | 0.691 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.986 | 0.075 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.998 | 0.769 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.981 | 0.087 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=4, k=1 | 4 | 0.00 | 2.50 [1.00, 4.00] | (0.5,0.5) 0.941 | 0.918 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.917 | 0.150 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.50 [0.00, 1.50] | (0.5,1) 0.991 | 0.862 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.978 | 0.112 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,4.5) 1.000 | 0.819 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.980 | 0.128 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2) 0.999 | 0.660 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.992 | 0.066 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=5, k=1 | 4 | 0.00 | 1.00 [0.00, 3.00] | (1,1) 0.980 | 0.981 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.980 | 0.100 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=5, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,1.5) 0.971 | 0.961 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.920 | 0.188 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2) 0.997 | 0.643 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.952 | 0.172 |
-| `misattribute_parent` | lineage_verifying | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,5) 1.000 | 0.779 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.958 | 0.184 |
-| `misattribute_parent` | no_policy | propagate=False, depth=1, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=1, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=1, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=1, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=2, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=2, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=2, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=2, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=3, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=3, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=3, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=3, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=4, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=4, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=4, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=4, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=5, k=1 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=5, k=2 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=5, k=3 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | no_policy | propagate=False, depth=5, k=4 | 4 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
-| `misattribute_parent` | origin_routing | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.50 [0.00, 1.50] | (1,1) 0.983 | 0.985 | any-hop(d) ^ all-args(k) (m=1, k=1) | 0.983 | 0.100 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1) 0.992 | 0.922 | any-hop(d) ^ all-args(k) (m=1, k=2) | 0.986 | 0.087 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.998 | 0.790 | any-hop(d) ^ all-args(k) (m=1, k=3) | 0.998 | 0.028 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,5) 0.999 | 0.635 | any-hop(d) ^ all-args(k) (m=1, k=4) | 0.994 | 0.066 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=2, k=1 | 4 | 0.00 | 1.50 [0.00, 3.00] | (2,1.5) 0.989 | 0.964 | any-hop(d) ^ all-args(k) (m=2, k=1) | 0.945 | 0.150 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (2,2.5) 0.995 | 0.954 | any-hop(d) ^ all-args(k) (m=2, k=2) | 0.984 | 0.112 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (3.5,8) 0.999 | 0.916 | any-hop(d) ^ all-args(k) (m=2, k=3) | 0.984 | 0.126 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (2.5,6.5) 0.996 | 0.884 | any-hop(d) ^ all-args(k) (m=2, k=4) | 0.990 | 0.078 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=3, k=1 | 4 | 0.00 | 2.50 [2.00, 3.50] | (2,1) 0.986 | 0.846 | any-hop(d) ^ all-args(k) (m=3, k=1) | 0.924 | 0.175 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.50 [0.00, 1.50] | (5.5,4.5) 0.999 | 0.866 | any-hop(d) ^ all-args(k) (m=3, k=2) | 0.982 | 0.134 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (4.5,7.5) 1.000 | 0.910 | any-hop(d) ^ all-args(k) (m=3, k=3) | 0.990 | 0.093 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (4,8) 1.000 | 0.919 | any-hop(d) ^ all-args(k) (m=3, k=4) | 0.996 | 0.062 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=4, k=1 | 4 | 0.00 | 5.50 [3.00, 8.00] | (3,0.5) 0.991 | -0.704 | any-hop(d) ^ all-args(k) (m=4, k=1) | 0.783 | 0.206 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=4, k=2 | 4 | 0.00 | 1.50 [0.50, 2.00] | (7,3) 0.998 | 0.712 | any-hop(d) ^ all-args(k) (m=4, k=2) | 0.959 | 0.183 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=4, k=3 | 4 | 0.00 | 1.00 [0.00, 2.00] | (5,4) 0.994 | 0.869 | any-hop(d) ^ all-args(k) (m=4, k=3) | 0.991 | 0.076 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (4.5,5) 1.000 | 0.902 | any-hop(d) ^ all-args(k) (m=4, k=4) | 0.999 | 0.028 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=5, k=1 | 4 | 0.00 | 3.50 [1.00, 5.50] | (4.5,1) 0.991 | 0.265 | any-hop(d) ^ all-args(k) (m=5, k=1) | 0.985 | 0.063 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=5, k=2 | 4 | 0.00 | 3.00 [2.00, 4.00] | (7,2) 0.997 | 0.505 | any-hop(d) ^ all-args(k) (m=5, k=2) | 0.942 | 0.168 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (8.5,8) 0.999 | 0.806 | any-hop(d) ^ all-args(k) (m=5, k=3) | 0.992 | 0.069 |
-| `misattribute_parent` | origin_routing | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (6,7.5) 0.996 | 0.844 | any-hop(d) ^ all-args(k) (m=5, k=4) | 0.981 | 0.138 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=1, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,4) 0.998 | 0.843 | any-hop(d) ^ all-args(k) (m=1, k=2) | 0.986 | 0.100 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=1, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1.5,6) 0.999 | 0.763 | any-hop(d) ^ all-args(k) (m=1, k=3) | 0.998 | 0.028 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=1, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (1,5) 0.999 | 0.607 | any-hop(d) ^ all-args(k) (m=1, k=4) | 0.990 | 0.066 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=1, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2.5) 0.999 | 0.568 | any-hop(d) ^ all-args(k) (m=1, k=5) | 0.990 | 0.087 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=2, k=1 | 4 | 0.00 | 0.00 [0.00, 0.00] | (2.5,3.5) 0.996 | 0.954 | any-hop(d) ^ all-args(k) (m=2, k=2) | 0.989 | 0.091 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=2, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (3,8) 0.990 | 0.906 | any-hop(d) ^ all-args(k) (m=2, k=3) | 0.980 | 0.122 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=2, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (2.5,6.5) 0.998 | 0.867 | any-hop(d) ^ all-args(k) (m=2, k=4) | 0.989 | 0.078 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=2, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (2.5,7.5) 0.993 | 0.862 | any-hop(d) ^ all-args(k) (m=2, k=5) | 0.982 | 0.126 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=3, k=1 | 4 | 0.00 | 0.50 [0.00, 1.50] | (2,1.5) 0.996 | 0.958 | any-hop(d) ^ all-args(k) (m=3, k=2) | 0.982 | 0.116 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=3, k=2 | 4 | 0.00 | 0.00 [0.00, 0.00] | (3.5,3) 0.998 | 0.927 | any-hop(d) ^ all-args(k) (m=3, k=3) | 0.991 | 0.080 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=3, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (3.5,5.5) 0.998 | 0.923 | any-hop(d) ^ all-args(k) (m=3, k=4) | 0.996 | 0.061 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=3, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (3.5,7) 0.998 | 0.904 | any-hop(d) ^ all-args(k) (m=3, k=5) | 0.995 | 0.065 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=4, k=1 | 4 | 0.00 | 3.00 [2.00, 5.00] | (2.5,1) 0.990 | 0.770 | any-hop(d) ^ all-args(k) (m=4, k=2) | 0.937 | 0.182 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=4, k=2 | 4 | 0.00 | 0.50 [0.00, 1.50] | (4,2.5) 0.999 | 0.878 | any-hop(d) ^ all-args(k) (m=4, k=3) | 0.993 | 0.081 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=4, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (5.5,7) 1.000 | 0.885 | any-hop(d) ^ all-args(k) (m=4, k=4) | 0.994 | 0.078 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=4, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (4.5,5) 1.000 | 0.902 | any-hop(d) ^ all-args(k) (m=4, k=5) | 0.993 | 0.076 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=5, k=1 | 4 | 0.00 | 2.00 [0.00, 4.00] | (4,2) 0.973 | 0.815 | any-hop(d) ^ all-args(k) (m=5, k=2) | 0.943 | 0.232 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=5, k=2 | 4 | 0.00 | 2.00 [0.50, 3.50] | (4,1.5) 0.988 | 0.768 | any-hop(d) ^ all-args(k) (m=5, k=3) | 0.950 | 0.156 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=5, k=3 | 4 | 0.00 | 0.00 [0.00, 0.00] | (7,7.5) 1.000 | 0.841 | any-hop(d) ^ all-args(k) (m=5, k=4) | 0.995 | 0.069 |
-| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=5, k=4 | 4 | 0.00 | 0.00 [0.00, 0.00] | (5.5,8) 0.988 | 0.831 | any-hop(d) ^ all-args(k) (m=5, k=5) | 0.975 | 0.158 |
+| `drop_label` | label_trusting | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | label_trusting | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | lineage_verifying | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=1, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=1, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=1, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=1, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=2, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=2, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=2, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=2, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=3, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=3, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=3, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=3, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=4, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=4, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=4, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=4, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=5, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=5, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=5, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | no_policy | propagate=False, depth=5, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | origin_routing | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `drop_label` | whole_call_quarantine | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | label_trusting | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.50 [0.00, 1.00] | (1.5,1.5) 0.997 | 0.994 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.992 | 0.050 |
+| `forge_label` | label_trusting | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,2) 0.990 | 0.921 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.990 | 0.083 |
+| `forge_label` | label_trusting | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.995 | 0.792 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.995 | 0.058 |
+| `forge_label` | label_trusting | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,4) 1.000 | 0.683 | sink-only(1) ^ all-args(k) (m=1, k=4) | 1.000 | 0.004 |
+| `forge_label` | label_trusting | propagate=False, depth=2, k=1 | 12 | 0.00 | 2.33 [1.33, 3.33] | (0.5,0.5) 0.970 | 0.925 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.907 | 0.133 |
+| `forge_label` | label_trusting | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.33 [0.00, 0.83] | (1,2) 0.999 | 0.895 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.999 | 0.023 |
+| `forge_label` | label_trusting | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,4) 0.999 | 0.847 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.960 | 0.178 |
+| `forge_label` | label_trusting | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1.5) 0.997 | 0.731 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.993 | 0.071 |
+| `forge_label` | label_trusting | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.67 [0.17, 1.17] | (1,1) 0.995 | 0.995 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.995 | 0.050 |
+| `forge_label` | label_trusting | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,2) 0.997 | 0.865 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.997 | 0.029 |
+| `forge_label` | label_trusting | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.999 | 0.752 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.999 | 0.022 |
+| `forge_label` | label_trusting | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,8) 1.000 | 0.673 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.999 | 0.029 |
+| `forge_label` | label_trusting | propagate=False, depth=4, k=1 | 12 | 0.00 | 1.33 [0.83, 1.83] | (1.5,1) 0.993 | 0.969 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.943 | 0.167 |
+| `forge_label` | label_trusting | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,4) 0.999 | 0.842 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.990 | 0.083 |
+| `forge_label` | label_trusting | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,7) 0.999 | 0.716 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.994 | 0.058 |
+| `forge_label` | label_trusting | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,7.5) 1.000 | 0.699 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.997 | 0.050 |
+| `forge_label` | label_trusting | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.83 [0.33, 1.33] | (1,1) 0.998 | 0.998 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.998 | 0.033 |
+| `forge_label` | label_trusting | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.17 [0.00, 0.50] | (1,2) 0.998 | 0.890 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.998 | 0.029 |
+| `forge_label` | label_trusting | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3.5) 0.999 | 0.732 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.993 | 0.072 |
+| `forge_label` | label_trusting | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2.5) 0.999 | 0.602 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.982 | 0.116 |
+| `forge_label` | lineage_verifying | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | lineage_verifying | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=1, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=1, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=1, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=1, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=2, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=2, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=2, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=2, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=3, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=3, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=3, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=3, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=4, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=4, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=4, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=4, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=5, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=5, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=5, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | no_policy | propagate=False, depth=5, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | origin_routing | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `forge_label` | whole_call_quarantine | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | label_trusting | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | lineage_verifying | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=1, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=1, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=1, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=1, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=2, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=2, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=2, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=2, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=3, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=3, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=3, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=3, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=4, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=4, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=4, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=4, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=5, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=5, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=5, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | no_policy | propagate=False, depth=5, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | origin_routing | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=4, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `merge_taint` | whole_call_quarantine | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,8) n/a | 1.000 | - | - | - |
+| `misattribute_parent` | label_trusting | propagate=False, depth=1, k=1 | 12 | 0.00 | 1.33 [0.50, 2.33] | (1,1) 0.983 | 0.987 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.983 | 0.083 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,2) 0.995 | 0.872 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.995 | 0.062 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,5.5) 1.000 | 0.769 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.996 | 0.045 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,4) 0.999 | 0.682 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.999 | 0.017 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=2, k=1 | 12 | 0.00 | 1.00 [0.50, 1.50] | (1,1.5) 0.990 | 0.962 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.948 | 0.150 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,2.5) 0.995 | 0.930 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.982 | 0.088 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 1.000 | 0.764 | sink-only(1) ^ all-args(k) (m=1, k=3) | 1.000 | 0.008 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,4.5) 1.000 | 0.636 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.996 | 0.050 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=3, k=1 | 12 | 0.00 | 1.33 [0.67, 2.17] | (1,1) 0.991 | 0.991 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.991 | 0.067 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.33 [0.00, 0.83] | (1,2) 0.995 | 0.889 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.995 | 0.037 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.999 | 0.783 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.999 | 0.025 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1.5) 0.997 | 0.726 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.992 | 0.071 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=4, k=1 | 12 | 0.00 | 1.83 [1.00, 2.67] | (1,1) 0.976 | 0.982 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.976 | 0.083 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.17 [0.00, 0.50] | (1,2) 0.998 | 0.909 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.998 | 0.033 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,5) 0.999 | 0.802 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.989 | 0.095 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2) 0.998 | 0.641 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.985 | 0.100 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.67 [0.00, 1.33] | (1.5,1.5) 0.995 | 0.990 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.986 | 0.083 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.17 [0.00, 0.50] | (1,2) 0.993 | 0.899 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.993 | 0.071 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3.5) 0.999 | 0.718 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.991 | 0.072 |
+| `misattribute_parent` | label_trusting | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,6.5) 1.000 | 0.721 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.987 | 0.100 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=1, k=1 | 12 | 0.00 | 1.33 [0.50, 2.33] | (1,1) 0.983 | 0.987 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.983 | 0.083 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,2) 0.995 | 0.872 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.995 | 0.062 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,5.5) 1.000 | 0.769 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.996 | 0.045 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,4) 0.999 | 0.682 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.999 | 0.017 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=2, k=1 | 12 | 0.00 | 1.00 [0.50, 1.50] | (1,1.5) 0.990 | 0.962 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.948 | 0.150 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,2.5) 0.995 | 0.930 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.982 | 0.088 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 1.000 | 0.764 | sink-only(1) ^ all-args(k) (m=1, k=3) | 1.000 | 0.008 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,4.5) 1.000 | 0.636 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.996 | 0.050 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=3, k=1 | 12 | 0.00 | 1.33 [0.67, 2.17] | (1,1) 0.991 | 0.991 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.991 | 0.067 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.33 [0.00, 0.83] | (1,2) 0.995 | 0.889 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.995 | 0.037 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.999 | 0.783 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.999 | 0.025 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,1.5) 0.997 | 0.726 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.992 | 0.071 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=4, k=1 | 12 | 0.00 | 1.83 [1.00, 2.67] | (1,1) 0.976 | 0.982 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.976 | 0.083 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.17 [0.00, 0.50] | (1,2) 0.998 | 0.909 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.998 | 0.033 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,5) 0.999 | 0.802 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.989 | 0.095 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (0.5,2) 0.998 | 0.641 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.985 | 0.100 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=5, k=1 | 12 | 0.00 | 0.67 [0.00, 1.33] | (1.5,1.5) 0.995 | 0.990 | sink-only(1) ^ all-args(k) (m=1, k=1) | 0.986 | 0.083 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=5, k=2 | 12 | 0.00 | 0.17 [0.00, 0.50] | (1,2) 0.993 | 0.899 | sink-only(1) ^ all-args(k) (m=1, k=2) | 0.993 | 0.071 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3.5) 0.999 | 0.718 | sink-only(1) ^ all-args(k) (m=1, k=3) | 0.991 | 0.072 |
+| `misattribute_parent` | lineage_verifying | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,6.5) 1.000 | 0.721 | sink-only(1) ^ all-args(k) (m=1, k=4) | 0.987 | 0.100 |
+| `misattribute_parent` | no_policy | propagate=False, depth=1, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=1, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=1, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=1, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=2, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=2, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=2, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=2, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=3, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=3, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=3, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=3, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=4, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=4, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=4, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=4, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=5, k=1 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=5, k=2 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=5, k=3 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | no_policy | propagate=False, depth=5, k=4 | 12 | 1.00 | 0.00 [0.00, 0.00] | (0.5,0.5) 1.000 | 1.000 | - | - | - |
+| `misattribute_parent` | origin_routing | propagate=False, depth=1, k=1 | 12 | 0.00 | 1.33 [0.50, 2.33] | (1,1) 0.983 | 0.987 | any-hop(d) ^ all-args(k) (m=1, k=1) | 0.983 | 0.083 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,2) 0.995 | 0.872 | any-hop(d) ^ all-args(k) (m=1, k=2) | 0.995 | 0.062 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1.5,5.5) 1.000 | 0.769 | any-hop(d) ^ all-args(k) (m=1, k=3) | 0.996 | 0.045 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,4) 0.999 | 0.682 | any-hop(d) ^ all-args(k) (m=1, k=4) | 0.999 | 0.017 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=2, k=1 | 12 | 0.00 | 2.17 [1.33, 3.00] | (1.5,1) 0.989 | 0.931 | any-hop(d) ^ all-args(k) (m=2, k=1) | 0.981 | 0.088 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.33 [0.00, 0.83] | (2.5,2) 0.996 | 0.967 | any-hop(d) ^ all-args(k) (m=2, k=2) | 0.988 | 0.075 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (2.5,4.5) 0.999 | 0.920 | any-hop(d) ^ all-args(k) (m=2, k=3) | 0.995 | 0.050 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (2,4) 0.998 | 0.915 | any-hop(d) ^ all-args(k) (m=2, k=4) | 0.998 | 0.030 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=3, k=1 | 12 | 0.00 | 3.17 [2.50, 3.83] | (3,1) 0.989 | 0.670 | any-hop(d) ^ all-args(k) (m=3, k=1) | 0.989 | 0.076 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.50 [0.00, 1.00] | (3.5,3) 0.999 | 0.923 | any-hop(d) ^ all-args(k) (m=3, k=2) | 0.995 | 0.068 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.33 [0.00, 0.83] | (3,3.5) 0.998 | 0.947 | any-hop(d) ^ all-args(k) (m=3, k=3) | 0.991 | 0.070 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (3,4.5) 1.000 | 0.935 | any-hop(d) ^ all-args(k) (m=3, k=4) | 0.997 | 0.053 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=4, k=1 | 12 | 0.00 | 4.50 [3.00, 6.00] | (5,1) 0.982 | 0.117 | any-hop(d) ^ all-args(k) (m=4, k=1) | 0.969 | 0.106 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=4, k=2 | 12 | 0.00 | 1.33 [0.50, 2.17] | (5,2.5) 0.999 | 0.801 | any-hop(d) ^ all-args(k) (m=4, k=2) | 0.995 | 0.054 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.50 [0.00, 1.00] | (4.5,3.5) 0.999 | 0.892 | any-hop(d) ^ all-args(k) (m=4, k=3) | 0.999 | 0.026 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (4,5) 1.000 | 0.916 | any-hop(d) ^ all-args(k) (m=4, k=4) | 0.994 | 0.068 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=5, k=1 | 12 | 0.00 | 3.50 [2.17, 4.67] | (4.5,1) 0.995 | 0.350 | any-hop(d) ^ all-args(k) (m=5, k=1) | 0.987 | 0.060 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=5, k=2 | 12 | 0.00 | 2.00 [1.00, 3.00] | (8.5,3) 1.000 | 0.568 | any-hop(d) ^ all-args(k) (m=5, k=2) | 0.960 | 0.185 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.50 [0.00, 1.00] | (5.5,3.5) 0.999 | 0.839 | any-hop(d) ^ all-args(k) (m=5, k=3) | 0.999 | 0.023 |
+| `misattribute_parent` | origin_routing | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.17 [0.00, 0.50] | (6.5,7.5) 0.999 | 0.847 | any-hop(d) ^ all-args(k) (m=5, k=4) | 0.993 | 0.069 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=1, k=1 | 12 | 0.00 | 0.17 [0.00, 0.50] | (1,1.5) 0.993 | 0.932 | any-hop(d) ^ all-args(k) (m=1, k=2) | 0.989 | 0.083 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=1, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,3) 0.999 | 0.752 | any-hop(d) ^ all-args(k) (m=1, k=3) | 0.999 | 0.022 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=1, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,4.5) 0.997 | 0.635 | any-hop(d) ^ all-args(k) (m=1, k=4) | 0.995 | 0.062 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=1, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (1,5.5) 1.000 | 0.596 | any-hop(d) ^ all-args(k) (m=1, k=5) | 0.999 | 0.021 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=2, k=1 | 12 | 0.00 | 0.17 [0.00, 0.50] | (1.5,1.5) 0.995 | 0.979 | any-hop(d) ^ all-args(k) (m=2, k=2) | 0.987 | 0.079 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=2, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (2,2.5) 0.999 | 0.960 | any-hop(d) ^ all-args(k) (m=2, k=3) | 0.992 | 0.061 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=2, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (2.5,6) 1.000 | 0.899 | any-hop(d) ^ all-args(k) (m=2, k=4) | 0.996 | 0.061 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=2, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (2,5) 0.999 | 0.876 | any-hop(d) ^ all-args(k) (m=2, k=5) | 0.999 | 0.026 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=3, k=1 | 12 | 0.00 | 0.67 [0.17, 1.17] | (3.5,2.5) 1.000 | 0.915 | any-hop(d) ^ all-args(k) (m=3, k=2) | 0.999 | 0.018 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=3, k=2 | 12 | 0.00 | 0.00 [0.00, 0.00] | (3,3.5) 0.998 | 0.946 | any-hop(d) ^ all-args(k) (m=3, k=3) | 0.997 | 0.053 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=3, k=3 | 12 | 0.00 | 0.33 [0.00, 0.83] | (3,5.5) 0.998 | 0.927 | any-hop(d) ^ all-args(k) (m=3, k=4) | 0.984 | 0.120 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=3, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (3.5,7) 1.000 | 0.919 | any-hop(d) ^ all-args(k) (m=3, k=5) | 0.999 | 0.031 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=4, k=1 | 12 | 0.00 | 1.50 [0.50, 2.67] | (4,2) 0.993 | 0.843 | any-hop(d) ^ all-args(k) (m=4, k=2) | 0.993 | 0.067 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=4, k=2 | 12 | 0.00 | 0.17 [0.00, 0.50] | (4.5,4) 1.000 | 0.904 | any-hop(d) ^ all-args(k) (m=4, k=3) | 0.998 | 0.036 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=4, k=3 | 12 | 0.00 | 0.00 [0.00, 0.00] | (5,6.5) 1.000 | 0.894 | any-hop(d) ^ all-args(k) (m=4, k=4) | 0.996 | 0.052 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=4, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (3.5,4) 1.000 | 0.924 | any-hop(d) ^ all-args(k) (m=4, k=5) | 0.999 | 0.024 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=5, k=1 | 12 | 0.00 | 1.67 [0.50, 2.83] | (5,2.5) 0.991 | 0.780 | any-hop(d) ^ all-args(k) (m=5, k=2) | 0.984 | 0.115 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=5, k=2 | 12 | 0.00 | 1.17 [0.33, 2.00] | (5.5,2.5) 0.998 | 0.783 | any-hop(d) ^ all-args(k) (m=5, k=3) | 0.983 | 0.123 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=5, k=3 | 12 | 0.00 | 0.17 [0.00, 0.50] | (5,4) 0.999 | 0.876 | any-hop(d) ^ all-args(k) (m=5, k=4) | 0.999 | 0.028 |
+| `misattribute_parent` | whole_call_quarantine | propagate=False, depth=5, k=4 | 12 | 0.00 | 0.00 [0.00, 0.00] | (6,7.5) 1.000 | 0.867 | any-hop(d) ^ all-args(k) (m=5, k=5) | 0.997 | 0.047 |

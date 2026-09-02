@@ -46,6 +46,23 @@ CPM（Counterfactual Provenance Mutation）是回答这个问题的**测量协�
                  cpm/stats.py        Wilson、按 trace 聚类的 bootstrap、McNemar（对确定性 cell 拒绝给 p 值）
 ```
 
+```
+  laws          cpm/laws.py        对每条曲线拟合 compound 族 y = y0 + (1-y0)(1-(1-p)^m)^k：
+                                   自由 (m,k)、线性基线，以及由轨迹结构固定 m,k 的零自由参数预测
+  execution     cpm/execution.py   执行阶段算子 stale_version / semantic_replay × 机制
+                                   grant_single_use / grant_revalidated / intent_ledger（同一 cells/curves 模式）
+  campaign      cpm/campaign.py    H1–H7 编排；结构预测规则；H5 诱导×结构分解 → campaign_summary.json
+```
+
+### 两种破坏语义
+
+`MutationSchedule.propagate` 决定被选中节点的破坏如何影响下游：
+
+- **propagate=True（默认，"被破坏的 hop"）**：下游派生节点的 observed label 由其父节点的 observed label 重新计算。memory 丢 metadata、组件把值重新标为 user、多来源合并——这些真实成因都作用在 hop 上，后续 hop 会继承。
+- **propagate=False（"sink 记录被破坏"）**：只改被选中节点自身的 label；下游保持 oracle label。这是更窄的失败模型（例如只有授权时读到的那条记录被篡改）。
+
+两种语义下 ancestry（parents）的改动都是结构性的，天然向下游传播；只有 label 的传播受该开关控制。深度律（H4）只在 propagate=True 下存在，见 RESULTS.md。
+
 ### 关键不变式（架构层面）
 
 1. **Ground truth 与 evidence 分离**：`ground_truth()` 只读 oracle graph。任何 mutation 都作用在 `oracle.copy()` 上。因此"合法请求因 provenance 丢失被阻断"永远记为 utility 损失，不能被定义成正确行为。
@@ -117,15 +134,17 @@ CPM（Counterfactual Provenance Mutation）是回答这个问题的**测量协�
 
 ## 5. 路线图
 
-| 批次 | 内容 | 依赖 | 状态 |
-|---|---|---|---|
-| 1 | 修正旧分析的报告缺陷（空分母、unique decisions、by-construction 标注、模型元数据） | — | 完成 |
-| 2 | `cpm/` 包：operators、schedule、trace、defenses、replay、degradation、stats、synthetic；首轮 sweep | — | 完成 |
-| 3 | 模型驱动 trace 源：模型自填参数 → `AgentTrace`；Qwen3:4B（本机）、Qwen3:8B / Llama3.1:8B（4090）完成 | — | 完成（结论：结构沿用模板，不作主结果） |
-| 4 | 外部 backend：AgentDojo slack suite → `AgentTrace`（oracle value attribution，注入 payload 拆分为独立 untrusted source）；Qwen3:8B 48 episodes（user_task_0..7）；作为可选外部有效性 backend 保留，不属 CPM 主线 | AgentDojo 环境 | 首批完成（见 RESULTS.md §3） |
-| 4' | 扩到 `workspace` / `banking` / `travel` suite（需为各 suite 写 `ToolSpec` 目录）；更强模型（`qwen3:14b` 或 API）以提高到达 sink 的比例；AgentDyn benign-instruction 对照 | 批次 4 | 待做 |
-| 5 | 已发表防御适配：ROPE（开源）直接接入；PACT / AuthGraph 机制级重实现并与其论文中的 oracle 结果对齐 | 批次 4 | 待做 |
-| 6 | 成本：graph 遍历延迟、token、按 p 分层的 FBR；多 agent ancestry；`stale_version` / `semantic_replay` operator | 批次 4 | 待做 |
+主线已从"接外部 benchmark"改为"在自有基础设施上用系统化实验建立规律"（2026-09-02 晚）。AgentDojo 降级为可选的外部有效性检查。
+
+| 批次 | 内容 | 状态 |
+|---|---|---|
+| 1 | 修正旧分析的报告缺陷（空分母、unique decisions、by-construction 标注、模型元数据） | 完成 |
+| 2 | `cpm/` 包：operators、schedule、trace、defenses、replay、degradation、stats、synthetic；首轮 sweep | 完成 |
+| 3 | 模型驱动 trace 源：模型自填参数 → `AgentTrace`；四种 disclosure 模式；Qwen3:4B（本机）、Qwen3:8B / Llama3.1:8B（4090） | 完成 |
+| 4 | AgentDojo backend（slack suite → `AgentTrace`） | 完成，**降级为可选** |
+| 5 | **规律战役 H1–H7**：传播语义、参数化套件（d, k）、规律拟合与零参数结构预测、执行阶段算子、诱导×结构分解 | 完成首轮（`artifacts/cpm-campaign-v1/`，见 RESULTS.md） |
+| 6 | 已发表防御适配：ROPE（开源）直接接入；PACT / AuthGraph 机制级重实现，用同一 mutation suite 验证其曲线落在哪个机制族 | 待做 |
+| 7 | 成本：graph 遍历延迟、token、按 p 分层；多 agent ancestry 的 misattribute 变体；`semantic_replay` 与真实 retry 策略 | 待做 |
 
 ## 6. 旧模块的定位
 

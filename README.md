@@ -8,9 +8,25 @@
 
 ## CPM 主线
 
+**规律战役（论文主结果）**：假设 H1–H7 的全部实验与拟合，一条命令：
+
 ```bash
 cd provenance_agent_eval
 PYTHONPATH=. python3 -m unittest discover -s tests
+PYTHONPATH=. python3 -m provenance_agent_eval.cpm_campaign --root artifacts/cpm-campaign-v1 \
+  --channels 12 \
+  --model-run qwen3-4b=artifacts/cpm-model-traces-qwen3-4b-v1 \
+  --model-run qwen3-8b=artifacts/cpm-model-traces-qwen3-8b-4090-disclosure-v1 \
+  --model-run llama31-8b=artifacts/cpm-model-traces-llama31-8b-4090-disclosure-v1
+# 输出：campaign_summary.json + 每个假设一个 sweep 目录（cells.jsonl.gz / curves.* / laws_asr.md / laws_fbr.md）
+# 只重跑一个假设（结果合并进已有 summary）：--hypotheses h3
+```
+
+假设、设计、拟合出的规律与判定见 [RESULTS.md](RESULTS.md)。
+
+其他入口：
+
+```bash
 # operator × error-rate × mechanism 退化曲线（合成 mixed-trust 轨迹套件）
 PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
   --output-dir artifacts/cpm-degradation-synthetic-v1 --seeds 5
@@ -21,11 +37,13 @@ PYTHONPATH=. python3 -m provenance_agent_eval.cpm_model_demo \
   --model qwen3:4b --base-url http://127.0.0.1:11434 \
   --output-dir artifacts/cpm-model-traces-qwen3-4b-v1 --variants 2 --phrasings 20 --seeds 5
 # 4090 节点：--model qwen3:8b --base-url http://192.168.1.105:11434
+# disclosure 模式：用户把 authority 值说得多明确（explicit / unspecified / partial / memory）
+#   --disclosures explicit,unspecified,partial,memory
 # 只重放已保存的 trace（不再调模型）：
 PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
   --traces artifacts/cpm-model-traces-qwen3-4b-v1/traces.jsonl --output-dir artifacts/replay-v1
 
-# AgentDojo backend：录制 slack suite 的多步 episode → AgentTrace → sweep
+# AgentDojo backend（可选的外部有效性检查，不属于主线）：录制 slack suite 的多步 episode → AgentTrace → sweep
 # 需要 agentdojo 包（见 requirements-agentdojo.txt），用 conda env `agentdojo` 的解释器运行；
 # 核心包与测试仍是纯标准库，agentdojo 只在录制时惰性导入
 PYTHONPATH=. /opt/miniconda3/envs/agentdojo/bin/python -m provenance_agent_eval.cpm_agentdojo_demo \
@@ -51,14 +69,18 @@ PYTHONPATH=. python3 -m provenance_agent_eval.cpm_results_table \
 |---|---|
 | `trace.py` | `AgentTrace` 规范、oracle graph、只由真实 root 决定的 ground truth |
 | `operators.py` | `MutationOperator`：preserve / drop_label / forge_label / misattribute_parent / merge_taint，各自绑定真实成因与不变量 |
-| `schedule.py` | 确定性 mutation 选择（operator, rate, seed, trace_id） |
+| `schedule.py` | 确定性 mutation 选择（operator, rate, seed, trace_id）；`propagate` 选择"被破坏的 hop 向下游传播"或"只破坏 sink 记录"两种语义 |
 | `defenses.py` | 机制抽象：no_policy / label_trusting / lineage_verifying / origin_routing / whole_call_quarantine |
 | `replay.py` | trace × schedule × mechanism → 决策、receipt、mutation 触及标记 |
 | `degradation.py` | sweep、退化曲线、阶段归因、不变量统计 |
+| `laws.py` | 退化规律拟合：compound 族 `y0+(1-y0)(1-(1-p)^m)^k` 的自由拟合、线性基线与**零自由参数的结构预测**检验；聚类 bootstrap 斜率 |
+| `execution.py` | 执行阶段算子 `stale_version` / `semantic_replay` 与机制 grant_single_use / grant_revalidated / intent_ledger（I4/I5 曲线） |
+| `campaign.py` | H1–H7 战役编排、结构预测规则、H5 诱导×结构分解 |
 | `stats.py` | Wilson、按 trace 聚类 bootstrap、拒绝对确定性 cell 报 p 值的 McNemar |
-| `synthetic.py` | 10 个 mixed-trust 模板 × 变体 × benign/attack 双胞胎 |
-| `model_traces.py` | 模型自填参数的单轮决策 → `AgentTrace`（结构沿用模板，模型决定 benign/attack 侧） |
-| `agentdojo_backend.py` | AgentDojo episode 录制（Ollama `/v1` tool calling）、oracle value attribution、`AgentTrace` 转换、CPM/AgentDojo 交叉表 |
+| `synthetic.py` | 10 个 mixed-trust 模板 × 变体 × benign/attack 双胞胎；`parametric_suite`：可控深度 d、authority 参数数 k、投毒模式 |
+| `plots.py` | 退化曲线 SVG；观测点 + bootstrap 带 + 零参数预测律叠加图 |
+| `model_traces.py` | 模型自填参数的单轮决策 → `AgentTrace`（结构沿用模板，模型决定 benign/attack 侧）；四种 disclosure 模式 |
+| `agentdojo_backend.py` | （可选）AgentDojo episode 录制、oracle value attribution、`AgentTrace` 转换 |
 
 ## 历史实验入口（附录 / 实现验证）
 

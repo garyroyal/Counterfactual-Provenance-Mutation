@@ -15,6 +15,7 @@ from __future__ import annotations
 import math
 import random
 from dataclasses import dataclass
+from fractions import Fraction
 from typing import Iterable, Sequence
 
 
@@ -115,7 +116,9 @@ def paired_binary(left: Iterable[int], right: Iterable[int], *, stochastic_cell:
     if discordant == 0:
         return PairedComparison(left_only, right_only, concordant, False, 1.0, "no discordant pairs")
     tail = sum(math.comb(discordant, value) for value in range(0, min(left_only, right_only) + 1))
-    p = min(1.0, 2.0 * tail / (2**discordant))
+    # Exact rational arithmetic: 2**discordant overflows a float for large
+    # discordant counts, but the ratio itself is always representable.
+    p = min(1.0, float(Fraction(2 * tail, 2**discordant)))
     return PairedComparison(left_only, right_only, concordant, False, p, "exact two-sided McNemar over discordant pairs")
 
 
