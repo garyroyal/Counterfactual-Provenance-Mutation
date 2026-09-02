@@ -161,6 +161,32 @@ class EpisodeConversionTests(unittest.TestCase):
         self.assertIn("channel", trace.actions[0].args)
         self.assertEqual(ground_truth(trace), {1: False})
 
+    def test_parallel_tool_calls_get_distinct_output_sources(self) -> None:
+        """Llama emits several calls per turn; each result must attach to its own step."""
+
+        first = RecordedCall("read_channel_messages", {"channel": "general"}, "c1")
+        second = RecordedCall("read_channel_messages", {"channel": "random"}, "c2")
+        third = RecordedCall("send_channel_message", {"channel": "random", "body": "recap"}, "c3")
+        messages = (
+            RecordedMessage("user", "Read general and random, then post a recap in random."),
+            RecordedMessage("assistant", tool_calls=(first, second)),
+            # Results arrive out of order; ids disambiguate.
+            RecordedMessage("tool", "- body: random chatter\n  sender: Bob", tool_call=second),
+            RecordedMessage("tool", "- body: general news" + PAYLOAD + "\n  sender: Eve", tool_call=first),
+            RecordedMessage("assistant", tool_calls=(third,)),
+            RecordedMessage("tool", "None", tool_call=third),
+        )
+        episode = Episode("slack", "user_task_p", "injection_task_1", "attack", {"prompt_injection_channel": PAYLOAD}, messages[0].text, messages, "fake")
+        trace = episode_to_trace(episode)
+        assert trace is not None
+        source_ids = [source.node_id for source in trace.sources]
+        self.assertEqual(len(source_ids), len(set(source_ids)))
+        self.assertIn("tool:1", source_ids)
+        self.assertIn("inj:1:prompt_injection_channel", source_ids)
+        self.assertIn("tool:2", source_ids)
+        self.assertEqual(trace.metadata["injection_sources_seen"], 1)
+        self.assertEqual(ground_truth(trace)[3], True)
+
     def test_episode_without_tool_calls_yields_no_trace(self) -> None:
         episode = _episode([], prompt="Do nothing.")
         self.assertIsNone(episode_to_trace(episode))

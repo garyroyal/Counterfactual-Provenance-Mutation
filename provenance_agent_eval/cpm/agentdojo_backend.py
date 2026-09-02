@@ -228,7 +228,7 @@ class _Source:
     injected: bool
 
 
-def _split_output(step: int, function: str, text: str, injections: Mapping[str, str], policy: str) -> list[_Source]:
+def _split_output(step: Any, function: str, text: str, injections: Mapping[str, str], policy: str) -> list[_Source]:
     """One benign source for the output remainder plus one untrusted source per payload it contains."""
 
     remainder = text
@@ -315,11 +315,16 @@ def episode_to_trace(
     model_generated = 0
     injected_sources = 0
     unknown_tools: set[str] = set()
+    # Models may issue several tool calls in one assistant turn; each result
+    # must be attached to the step of the call it answers (by id, else in order).
+    pending_steps: list[tuple[str | None, int]] = []
 
     for message in episode.messages:
         if message.role == "assistant":
+            pending_steps = []
             for call in message.tool_calls:
                 step += 1
+                pending_steps.append((call.call_id, step))
                 spec = catalogue.get(call.function)
                 if spec is None:
                     unknown_tools.add(call.function)
@@ -353,8 +358,14 @@ def episode_to_trace(
         elif message.role == "tool":
             # The output becomes visible to the model for every *later* call.
             function = message.tool_call.function if message.tool_call else "tool"
+            call_id = message.tool_call.call_id if message.tool_call else None
+            index = next((i for i, (cid, _) in enumerate(pending_steps) if cid is not None and cid == call_id), 0 if pending_steps else None)
+            result_step = pending_steps.pop(index)[1] if index is not None else step
             text = message.error or message.text
-            for source in _split_output(step, function, text, episode.injections, untrusted_policy):
+            label: Any = result_step
+            while f"tool:{label}" in {source.node_id for source in sources}:
+                label = f"{label}x"  # orphan result (no matching call); keep ids unique
+            for source in _split_output(label, function, text, episode.injections, untrusted_policy):
                 visible.append(source)
                 sources.append(SourceSpec(source.node_id, source.provenance))
                 injected_sources += int(source.injected)
