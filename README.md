@@ -20,7 +20,7 @@ PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
 PYTHONPATH=. python3 -m provenance_agent_eval.cpm_model_demo \
   --model qwen3:4b --base-url http://127.0.0.1:11434 \
   --output-dir artifacts/cpm-model-traces-qwen3-4b-v1 --variants 2 --phrasings 20 --seeds 5
-# 4090 节点：--model qwen3:8b --base-url http://192.168.1.112:11434
+# 4090 节点：--model qwen3:8b --base-url http://192.168.1.105:11434
 # 只重放已保存的 trace（不再调模型）：
 PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
   --traces artifacts/cpm-model-traces-qwen3-4b-v1/traces.jsonl --output-dir artifacts/replay-v1
@@ -98,11 +98,11 @@ PYTHONPATH=. python3 -m provenance_agent_eval.model_compare_demo \
 
 ```bash
 PYTHONPATH=. python3 -m provenance_agent_eval.real_tool_runner \
-  --model qwen3:8b --base-url http://192.168.1.112:11434 \
+  --model qwen3:8b --base-url http://192.168.1.105:11434 \
   --repetitions 20 --output-dir artifacts/real-tool-qwen3-8b-4090-r20-v2
 
 PYTHONPATH=. python3 -m provenance_agent_eval.real_tool_runner \
-  --model llama3.1:8b --base-url http://192.168.1.112:11434 \
+  --model llama3.1:8b --base-url http://192.168.1.105:11434 \
   --repetitions 20 --output-dir artifacts/real-tool-llama31-8b-4090-r20-v2
 
 PYTHONPATH=. python3 -m provenance_agent_eval.real_tool_analysis_demo \
@@ -129,11 +129,11 @@ PYTHONPATH=. python3 -m provenance_agent_eval.factorial_analysis_demo \
 
 ```bash
 PYTHONPATH=. python3 -m provenance_agent_eval.model_factorial_demo \
-  --model qwen3:8b --base-url http://192.168.1.112:11434 \
+  --model qwen3:8b --base-url http://192.168.1.105:11434 \
   --repetitions 20 --output-dir artifacts/factorial-qwen3-8b-4090-v1
 
 PYTHONPATH=. python3 -m provenance_agent_eval.model_factorial_demo \
-  --model llama3.1:8b --base-url http://192.168.1.112:11434 \
+  --model llama3.1:8b --base-url http://192.168.1.105:11434 \
   --repetitions 20 --output-dir artifacts/factorial-llama31-8b-4090-v1
 
 PYTHONPATH=. python3 -m provenance_agent_eval.factorial_analysis_demo \
