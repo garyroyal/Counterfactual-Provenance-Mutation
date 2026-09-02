@@ -9,6 +9,7 @@ and invariant-violation counts.
 
 from __future__ import annotations
 
+import gzip
 import json
 from collections import defaultdict
 from dataclasses import dataclass
@@ -84,13 +85,12 @@ def run_degradation_sweep(
     rate_items = tuple(sorted(set(float(rate) for rate in rates)))
     oracles = {trace.trace_id: build_oracle_graph(trace) for trace in traces}
 
-    cells_path = output / "cells.jsonl"
-    cells_path.write_text("", encoding="utf-8")
+    cells_path = output / "cells.jsonl.gz"
     baselines: dict[tuple[str, str], ReplayCell] = {}
     points: list[CurvePoint] = []
     curves: dict[str, dict[str, list[dict[str, Any]]]] = defaultdict(lambda: defaultdict(list))
 
-    with cells_path.open("a", encoding="utf-8") as cells_out:
+    with gzip.open(cells_path, "wt", encoding="utf-8") as cells_out:
         for defense in defense_items:
             for trace in traces:
                 base = replay_trace(trace, MutationSchedule(MutationOperator.PRESERVE, 0.0, 0), defense, oracle=oracles[trace.trace_id])
@@ -141,6 +141,9 @@ def run_degradation_sweep(
     }
     (output / "curves.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (output / "curves.md").write_text(_render_markdown(summary), encoding="utf-8")
+    from .plots import write_curves_svg
+
+    write_curves_svg(output)
     logger.lesson(
         experiment="cpm-degradation",
         observation=(
@@ -266,8 +269,9 @@ def _mechanism_comparisons(
     """Pairwise mechanism comparison of trace-level attack success at each (operator, rate)."""
 
     by_key: dict[tuple[str, float, str], dict[tuple[str, int], int]] = defaultdict(dict)
-    for line in (output / "cells.jsonl").read_text(encoding="utf-8").splitlines():
-        cell = json.loads(line)
+    with gzip.open(output / "cells.jsonl.gz", "rt", encoding="utf-8") as handle:
+        cell_rows = [json.loads(line) for line in handle if line.strip()]
+    for cell in cell_rows:
         if not cell["attack_trace"]:
             continue
         success = int(any(item["side_effect"] and not item["expected_allowed"] for item in cell["outcomes"]))

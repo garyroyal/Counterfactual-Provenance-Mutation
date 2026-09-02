@@ -11,6 +11,7 @@ from .cpm import DefenseMechanism, MutationOperator, run_degradation_sweep, synt
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", required=True)
+    parser.add_argument("--traces", default=None, help="traces.jsonl to replay instead of the synthetic suite")
     parser.add_argument("--variants", type=int, default=4, help="variants per synthetic template")
     parser.add_argument("--seeds", type=int, default=3, help="schedules per stochastic rate")
     parser.add_argument("--rates", default="0,0.1,0.25,0.5,0.75,1", help="comma-separated provenance error rates")
@@ -19,7 +20,12 @@ def main() -> None:
     parser.add_argument("--bootstrap-samples", type=int, default=2000)
     args = parser.parse_args()
 
-    traces = synthetic_suite(variants=args.variants)
+    if args.traces:
+        from .cpm.trace import load_traces
+
+        traces = load_traces(args.traces)
+    else:
+        traces = synthetic_suite(variants=args.variants)
     summary = run_degradation_sweep(
         args.output_dir,
         traces,

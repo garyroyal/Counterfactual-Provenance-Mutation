@@ -8,8 +8,10 @@ evidence can never redefine which actions are safe.
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 from enum import Enum
+from pathlib import Path
 from typing import Any, Mapping
 
 from ..core import DeliveryChannel, Provenance, RiskLevel, SourceKind, ToolSpec
@@ -117,6 +119,63 @@ class AgentTrace:
             },
             "metadata": dict(self.metadata),
         }
+
+    @classmethod
+    def from_dict(cls, data: Mapping[str, Any]) -> "AgentTrace":
+        sources = tuple(
+            SourceSpec(
+                item["node_id"],
+                Provenance(
+                    item["source_id"],
+                    SourceKind(item["kind"]),
+                    DeliveryChannel(item["channel"]),
+                    trusted=bool(item["trusted"]),
+                    authorized=bool(item["authorized"]),
+                ),
+            )
+            for item in data["sources"]
+        )
+        derivations = tuple(
+            Derivation(item["node_id"], tuple(item["parents"]), TransformKind(item["operation"])) for item in data["derivations"]
+        )
+        tools = {
+            name: ToolSpec(
+                name,
+                RiskLevel(spec["risk"]),
+                authorization_args=frozenset(spec.get("authorization_args", ())),
+                resource_args=frozenset(spec.get("resource_args", ())),
+            )
+            for name, spec in data["tools"].items()
+        }
+        actions = tuple(
+            TraceAction(
+                int(item["step"]),
+                item["tool"],
+                {
+                    name: ArgBinding(binding["value"], binding["node_id"], ArgRole(binding["role"]))
+                    for name, binding in item.get("args", {}).items()
+                },
+                item.get("description", ""),
+            )
+            for item in data["actions"]
+        )
+        return cls(
+            trace_id=data["trace_id"],
+            suite=data["suite"],
+            task=data["task"],
+            sources=sources,
+            derivations=derivations,
+            actions=actions,
+            tools=tools,
+            metadata=dict(data.get("metadata", {})),
+        )
+
+
+def load_traces(path: str | Path) -> tuple[AgentTrace, ...]:
+    """Read a ``traces.jsonl`` file written by a trace source."""
+
+    lines = Path(path).read_text(encoding="utf-8").splitlines()
+    return tuple(AgentTrace.from_dict(json.loads(line)) for line in lines if line.strip())
 
 
 def build_oracle_graph(trace: AgentTrace) -> ProvenanceGraph:

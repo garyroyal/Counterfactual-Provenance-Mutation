@@ -1,3 +1,4 @@
+import gzip
 import json
 import tempfile
 import unittest
@@ -149,7 +150,8 @@ class SweepTests(unittest.TestCase):
                 bootstrap_samples=50,
             )
             self.assertTrue(Path(directory, "curves.md").exists())
-            cells = [json.loads(line) for line in Path(directory, "cells.jsonl").read_text().splitlines()]
+            with gzip.open(Path(directory, "cells.jsonl.gz"), "rt", encoding="utf-8") as handle:
+                cells = [json.loads(line) for line in handle if line.strip()]
             # 2 operators x (1 + 2 + 1 schedules) x 2 defenses x 4 traces
             self.assertEqual(len(cells), 2 * 4 * 2 * 4)
             forge = summary["curves"]["forge_label"]["label_trusting"]

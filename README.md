@@ -14,7 +14,16 @@ PYTHONPATH=. python3 -m unittest discover -s tests
 # operator × error-rate × mechanism 退化曲线（合成 mixed-trust 轨迹套件）
 PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
   --output-dir artifacts/cpm-degradation-synthetic-v1 --seeds 5
-# 输出：curves.md / curves.json（曲线）、cells.jsonl（每 cell 原始记录）、report.md、progress.html
+# 输出：curves.md / curves.json / curves.svg（曲线）、cells.jsonl.gz（每 cell 原始记录）、report.md、progress.html
+
+# 模型驱动 trace：模型自己填参数，按参数来源判定诱导；附 clean 对照；随后自动 sweep
+PYTHONPATH=. python3 -m provenance_agent_eval.cpm_model_demo \
+  --model qwen3:4b --base-url http://127.0.0.1:11434 \
+  --output-dir artifacts/cpm-model-traces-qwen3-4b-v1 --variants 2 --phrasings 20 --seeds 5
+# 4090 节点：--model qwen3:8b --base-url http://192.168.1.112:11434
+# 只重放已保存的 trace（不再调模型）：
+PYTHONPATH=. python3 -m provenance_agent_eval.cpm_degradation_demo \
+  --traces artifacts/cpm-model-traces-qwen3-4b-v1/traces.jsonl --output-dir artifacts/replay-v1
 ```
 
 `provenance_agent_eval/cpm/`：
