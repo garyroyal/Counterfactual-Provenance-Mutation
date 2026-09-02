@@ -122,7 +122,7 @@ CPM（Counterfactual Provenance Mutation）是回答这个问题的**测量协�
 | 1 | 修正旧分析的报告缺陷（空分母、unique decisions、by-construction 标注、模型元数据） | — | 完成 |
 | 2 | `cpm/` 包：operators、schedule、trace、defenses、replay、degradation、stats、synthetic；首轮 sweep | — | 完成 |
 | 3 | 模型驱动 trace 源：模型自填参数 → `AgentTrace`；Qwen3:4B（本机）、Qwen3:8B / Llama3.1:8B（4090）完成 | — | 完成（结论：结构沿用模板，不作主结果） |
-| 4 | 外部 backend：AgentDojo slack suite → `AgentTrace`（oracle value attribution，注入 payload 拆分为独立 untrusted source）；Qwen3:8B / Llama3.1:8B 各 126 episodes | AgentDojo 环境 | 完成（见 RESULTS.md §3） |
+| 4 | 外部 backend：AgentDojo slack suite → `AgentTrace`（oracle value attribution，注入 payload 拆分为独立 untrusted source）；Qwen3:8B 48 episodes（user_task_0..7）；作为可选外部有效性 backend 保留，不属 CPM 主线 | AgentDojo 环境 | 首批完成（见 RESULTS.md §3） |
 | 4' | 扩到 `workspace` / `banking` / `travel` suite（需为各 suite 写 `ToolSpec` 目录）；更强模型（`qwen3:14b` 或 API）以提高到达 sink 的比例；AgentDyn benign-instruction 对照 | 批次 4 | 待做 |
 | 5 | 已发表防御适配：ROPE（开源）直接接入；PACT / AuthGraph 机制级重实现并与其论文中的 oracle 结果对齐 | 批次 4 | 待做 |
 | 6 | 成本：graph 遍历延迟、token、按 p 分层的 FBR；多 agent ancestry；`stale_version` / `semantic_replay` operator | 批次 4 | 待做 |
