@@ -25,7 +25,7 @@ from .stats import cluster_bootstrap_mean, paired_binary, wilson
 from .trace import AgentTrace, build_oracle_graph
 
 
-DEFAULT_RATES: tuple[float, ...] = (0.0, 0.1, 0.25, 0.5, 0.75, 1.0)
+DEFAULT_RATES: tuple[float, ...] = (0.0, 0.05, 0.1, 0.25, 0.5, 0.75, 1.0)
 AUTHORITY_GAIN_OPERATORS = {
     MutationOperator.DROP_LABEL,
     MutationOperator.FORGE_LABEL,
@@ -76,6 +76,8 @@ def run_degradation_sweep(
     rates: Iterable[float] = DEFAULT_RATES,
     seeds: int = 3,
     bootstrap_samples: int = 2000,
+    propagate: bool = True,
+    follow_up: str = "Fit degradation laws (cpm.laws) and replicate on model-driven traces.",
 ) -> dict[str, Any]:
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -93,7 +95,7 @@ def run_degradation_sweep(
     with gzip.open(cells_path, "wt", encoding="utf-8") as cells_out:
         for defense in defense_items:
             for trace in traces:
-                base = replay_trace(trace, MutationSchedule(MutationOperator.PRESERVE, 0.0, 0), defense, oracle=oracles[trace.trace_id])
+                base = replay_trace(trace, MutationSchedule(MutationOperator.PRESERVE, 0.0, 0, propagate), defense, oracle=oracles[trace.trace_id])
                 baselines[(trace.trace_id, defense.value)] = base
         for operator in operator_items:
             for rate in rate_items:
@@ -101,7 +103,7 @@ def run_degradation_sweep(
                 for defense in defense_items:
                     cells: list[ReplayCell] = []
                     for seed in seed_items:
-                        schedule = MutationSchedule(operator, rate, seed)
+                        schedule = MutationSchedule(operator, rate, seed, propagate)
                         for trace in traces:
                             cell = replay_trace(trace, schedule, defense, oracle=oracles[trace.trace_id])
                             cells.append(cell)
@@ -135,6 +137,8 @@ def run_degradation_sweep(
         "defenses": [item.value for item in defense_items],
         "rates": list(rate_items),
         "seeds_per_stochastic_rate": seeds,
+        "propagate": propagate,
+        "suite": sorted({trace.suite for trace in traces}),
         "curves": {operator: dict(by_defense) for operator, by_defense in curves.items()},
         "mechanism_comparisons": comparisons,
         "invariants": _invariant_summary(points),
@@ -153,7 +157,7 @@ def run_degradation_sweep(
         evidence=tuple(record.record_id for record in logger._read_records()[:8]),
         conclusion=_headline(summary),
         confidence="medium",
-        follow_up="Replace the synthetic suite with recorded AgentDojo/AgentDyn traces and add published-defense adapters.",
+        follow_up=follow_up,
     )
     logger.write_report()
     logger.write_lessons_report()
@@ -173,6 +177,8 @@ def _cell_record(cell: ReplayCell, baseline: ReplayCell) -> dict[str, Any]:
         "observed_graph_sound": cell.observed_graph_sound,
         "attack_trace": cell.metadata.get("attack_trace"),
         "template": cell.metadata.get("template"),
+        "propagate": cell.metadata.get("propagate", True),
+        **{key: cell.metadata[key] for key in ("depth", "k", "poisoned", "model", "phrasing") if key in cell.metadata},
         "outcomes": [
             {
                 "step": item.step,

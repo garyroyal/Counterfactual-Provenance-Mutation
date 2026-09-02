@@ -9,7 +9,7 @@ from ..core import ActionRequest, ProvenanceValue
 from ..provenance_graph import ProvenanceGraph
 from ..runtime import ProvenanceRuntime
 from .defenses import DefenseMechanism, make_authorizer
-from .operators import MutationOperator, OperatorContext, apply_operator, eligible_nodes
+from .operators import MutationOperator, OperatorContext, apply_operator, eligible_nodes, propagate_labels
 from .schedule import MutationSchedule
 from .trace import AgentTrace, build_oracle_graph, ground_truth, untrusted_node_ids
 
@@ -104,6 +104,8 @@ def mutate_trace(
     redirect: dict[str, str] = {}
     for node_id in selected:
         redirect[node_id] = apply_operator(observed, node_id, schedule.operator, context)
+    if schedule.propagate and selected:
+        propagate_labels(observed, pinned=set(selected))
     return observed, redirect, eligible, selected
 
 
@@ -159,7 +161,13 @@ def replay_trace(
         mutated_nodes=selected,
         outcomes=tuple(outcomes),
         observed_graph_sound=all(observed.is_sound(node_id) for node_id in observed.nodes),
-        metadata={"redirect": redirect, "template": trace.metadata.get("template"), "attack_trace": trace.metadata.get("attack")},
+        metadata={
+            "redirect": redirect,
+            "template": trace.metadata.get("template"),
+            "attack_trace": trace.metadata.get("attack"),
+            "propagate": schedule.propagate,
+            **{key: trace.metadata[key] for key in ("depth", "k", "poisoned", "model", "phrasing") if key in trace.metadata},
+        },
     )
 
 

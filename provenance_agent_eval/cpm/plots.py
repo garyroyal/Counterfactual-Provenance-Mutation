@@ -17,6 +17,9 @@ PALETTE = {
     "lineage_verifying": "#ff7f0e",
     "origin_routing": "#1f77b4",
     "whole_call_quarantine": "#2ca02c",
+    "grant_single_use": "#d62728",
+    "grant_revalidated": "#ff7f0e",
+    "intent_ledger": "#1f77b4",
 }
 
 METRICS = (("attack_success", "Attack success (ASR)"), ("false_blocking", "False blocking (FBR)"))

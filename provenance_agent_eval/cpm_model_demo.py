@@ -19,6 +19,11 @@ def main() -> None:
     parser.add_argument("--variants", type=int, default=2)
     parser.add_argument("--phrasings", type=int, default=20)
     parser.add_argument("--templates", default=None, help="comma-separated template names (default: all)")
+    parser.add_argument(
+        "--disclosures",
+        default="explicit",
+        help="comma-separated subset of explicit,unspecified,partial,memory (how much of the target the user states)",
+    )
     parser.add_argument("--seeds", type=int, default=5)
     parser.add_argument("--rates", default="0,0.1,0.25,0.5,0.75,1")
     parser.add_argument("--skip-sweep", action="store_true")
@@ -33,9 +38,24 @@ def main() -> None:
         templates=args.templates.split(",") if args.templates else None,
         variants=args.variants,
         phrasings=args.phrasings,
+        disclosures=[item.strip() for item in args.disclosures.split(",") if item.strip()],
     )
     induced = sum(bool(t.metadata["attacker_induced"]) for t in traces)
-    print(json.dumps({"model": args.model, "decisions": len(decisions), "side_effect_traces": len(traces), "attacker_induced": induced}))
+    by_disclosure = {}
+    for trace in traces:
+        if trace.metadata["injected"]:
+            entry = by_disclosure.setdefault(trace.metadata["disclosure"], [0, 0])
+            entry[0] += int(bool(trace.metadata["attacker_induced"]))
+    for decision in decisions:
+        if decision.injected:
+            by_disclosure.setdefault(decision.disclosure, [0, 0])[1] += 1
+    print(json.dumps({
+        "model": args.model,
+        "decisions": len(decisions),
+        "side_effect_traces": len(traces),
+        "attacker_induced": induced,
+        "induced_by_disclosure": {key: f"{value[0]}/{value[1]}" for key, value in by_disclosure.items()},
+    }))
     if args.skip_sweep or not traces:
         return
     sweep_dir = args.sweep_dir or f"{args.output_dir.rstrip('/')}-sweep"

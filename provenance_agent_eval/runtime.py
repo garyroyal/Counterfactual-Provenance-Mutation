@@ -79,13 +79,21 @@ class SourceAwareAuthorizer:
 
         checked_args = spec.authorization_args or frozenset(action.args)
         checked_sources: set[Provenance] = set()
-        for name in checked_args:
-            checked_sources.update(collect_provenance(action.args.get(name)))
-        # A declared control argument with no provenance is not implicitly
-        # trusted. This keeps authorization explicit for destinations,
-        # targets, paths, and similar side-effect selectors.
-        if not checked_sources:
-            return AuthorizationDecision(False, "required authorization arguments have no attributable source", sources)
+        # Every declared control argument must be individually attributable.
+        # A destination, target or path with no provenance is not implicitly
+        # trusted, even when a sibling argument is well labelled.
+        unattributed = []
+        for name in sorted(checked_args):
+            arg_sources = collect_provenance(action.args.get(name))
+            if not arg_sources:
+                unattributed.append(name)
+            checked_sources.update(arg_sources)
+        if unattributed:
+            return AuthorizationDecision(
+                False,
+                f"required authorization arguments have no attributable source: {', '.join(unattributed)}",
+                sources,
+            )
 
         if self.graph is not None:
             checked_nodes = set()

@@ -22,6 +22,10 @@ class MutationSchedule:
     operator: MutationOperator
     rate: float
     seed: int = 0
+    # ``propagate=True`` models a corrupted *hop*: downstream nodes inherit the
+    # corrupted label.  ``propagate=False`` models a corrupted sink-side
+    # evidence record for exactly the selected node.
+    propagate: bool = True
 
     def __post_init__(self) -> None:
         if not 0.0 <= self.rate <= 1.0:
@@ -40,4 +44,5 @@ class MutationSchedule:
 
     @property
     def label(self) -> str:
-        return f"{self.operator.value}@{self.rate:g}#{self.seed}"
+        suffix = "" if self.propagate else "|sink-only"
+        return f"{self.operator.value}@{self.rate:g}#{self.seed}{suffix}"

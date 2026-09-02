@@ -179,3 +179,47 @@ def _pick_taint(graph: ProvenanceGraph, node_id: str, context: OperatorContext) 
             continue
         return candidate
     raise ValueError(f"no untrusted node can taint {node_id} without creating a cycle")
+
+
+def propagate_labels(graph: ProvenanceGraph, pinned: set[str]) -> None:
+    """Recompute observed labels downstream of mutated nodes.
+
+    Real provenance pipelines carry labels *forward*: a hop that drops its
+    metadata leaves every later hop unlabelled, and a hop that re-tags a value
+    as user-provided is believed by every later hop.  After the operators have
+    set the labels of the ``pinned`` (mutated) nodes explicitly, every other
+    derived node's observed label is recomputed as the union of its parents'
+    observed labels, in topological order.  Root sources are never changed.
+
+    Without this pass an operator corrupts only the sink-side evidence record
+    of one node; that is a different (narrower) failure model, kept available
+    as ``propagate=False`` in :class:`~.schedule.MutationSchedule`.
+    """
+
+    order = _topological_order(graph)
+    for node_id in order:
+        node = graph.node(node_id)
+        if not node.parents or node_id in pinned:
+            continue
+        inherited = frozenset(
+            source for parent_id in node.parents for source in graph.node(parent_id).attached_sources
+        )
+        if inherited != node.attached_sources:
+            graph.rewire(node_id, attached_sources=inherited)
+
+
+def _topological_order(graph: ProvenanceGraph) -> list[str]:
+    nodes = graph.nodes
+    indegree = {node_id: len(node.parents) for node_id, node in nodes.items()}
+    ready = sorted(node_id for node_id, degree in indegree.items() if degree == 0)
+    order: list[str] = []
+    while ready:
+        current = ready.pop(0)
+        order.append(current)
+        for child_id in sorted(graph.children(current)):
+            indegree[child_id] -= 1
+            if indegree[child_id] == 0:
+                ready.append(child_id)
+    if len(order) != len(nodes):
+        raise ValueError("provenance graph contains a cycle")
+    return order
